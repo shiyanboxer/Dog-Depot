@@ -1,5 +1,7 @@
+import json
 import flask
 import pymongo
+import Connection as con
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -11,20 +13,27 @@ def home():
     :return: images
     """
 
-    # Connect MongoDB cluster database. Object of cluster
-    client = pymongo.MongoClient("mongodb+srv://shiyanboxer:NewPass@cluster0.qd7ht.mongodb.net/test")
+    try:
+        # Connect MongoDB cluster database. Object of cluster
+        # client = pymongo.MongoClient("mongodb+srv://shiyanboxer:NewPass@cluster0.qd7ht.mongodb.net/test")
 
-    # Returns database
-    DB = client["ImageRepository"]
+        images = con.connect_db()
 
-    # Access collection - object pointing to collection
-    images = DB["Images"]
+        if isinstance(images, dict):
+           return images    # if error
 
-    cursor = images.find({})
+        response = []
 
-    for i in cursor:
-        print(i)
+        cursor = images.find({})
+        for i in cursor:
 
-    return "Hi there"
+            each_list = [ i["URL"], i["ImageName"], i["Author"] ]
+            response.append(each_list)
+
+    # https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html
+    except Exception as e:
+        return {"isError" : True, "errorMessage" : "An Exception has occured"}
+
+    return {"isError" : False, "response" : json.dumps(response)}
 
 app.run(port=5000)

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FlaskAPI/.idea/FlaskAPI.iml" filepath="$PROJECT_DIR$/FlaskAPI/.idea/FlaskAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Image-Repository.iml" filepath="$PROJECT_DIR$/.idea/Image-Repository.iml" />
     </modules>
   </component>
