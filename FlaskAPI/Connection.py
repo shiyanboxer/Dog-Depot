@@ -1,5 +1,6 @@
 import pymongo
 
+
 def connect_db():
     try:
         # Connect MongoDB cluster database. Object of cluster
@@ -12,8 +13,6 @@ def connect_db():
         images = DB["images"]
         # https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html
     except Exception as e:
-        return {"isError" : True, "errorMessage" : "An Exception has occured"}
+        return {"isError": True, "errorMessage": "An Exception has occured"}
 
     return images
-
-
