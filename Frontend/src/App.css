@@ -1,0 +1,56 @@
+/*card*/
+.card {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  border-radius: 10px; /* 5px rounded corners */
+  padding: 2px;
+  margin-top: 3em;
+  background-color: #fefefe; /* charcoal */
+  color: #151515; /* off white */
+}
+
+/*search bar*/
+.searchBar{
+  float: left;
+  /*display: block;*/
+  color: black;
+  display: flex;
+  min-width: 200px;
+  text-align: center;
+  padding-right: 235px;
+  font-size: 20px;
+}
+
+/*overall style*/
+.App {
+  background-color: #151515; /* charcoal */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  text-align: center;
+}
+
+/*nav bar*/
+.navbar {
+  float: left;
+  font-size: 25px;
+}
+
+/* footer link */
+a:link, a:visited {
+  color: #fefefe; /* off white */
+}
+a:hover, a:active {
+  color: #0000ff; /* blue */
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 30px;
+}
