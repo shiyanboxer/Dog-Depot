@@ -5,7 +5,7 @@ class Card extends React.Component{
     render() {
         return (
             <MDBCol>
-              <MDBCard style={{ width: "22rem" }}>
+              <MDBCard style={{ width: "22rem", height: "20rem" }}>
                 <MDBCardImage className="img-fluid" src={this.props.src} waves />
                 <MDBCardBody>
                   <MDBCardTitle>{this.props.title}</MDBCardTitle>
