@@ -1,10 +1,10 @@
 # Image Repository
 
-- #### By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)
-- #### Last Updated: January 17th, 2020
-- #### [Website Link](https://dog-image-repository.netlify.app/)
-- #### [API Link](https://image-repository-by-shiyan.herokuapp.com/)
-- #### [Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)
+- **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
+- **Last Updated: January 17th, 2020**
+- **[Website Link](https://dog-image-repository.netlify.app/)**
+- **[API Link](https://image-repository-by-shiyan.herokuapp.com/)**
+- **[Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
    - **[Software Architecture](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/1_Software_Architecture.md)**
    - **[Steps](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/2_Steps.md)**
    - **[Test, Contribute, Version, and Learning Resources](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/3_Test_Contribute_Version_%20Learning_Resources.md)**
