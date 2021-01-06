@@ -1,14 +1,32 @@
+import json
 import flask
+import pymongo
+import Connection as con
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+cors = CORS(app)
+
 app.config["DEBUG"] = True
 
-@app.route('delete/', methods=['GET'])
-def delete():
+@app.route('/upload', methods=['GET'])
+def upload():
     """
-    Load images on home screen
-    :return: images
+    Upload image to database
+    :return: if no error, return if error return isError is True and an error message
     """
-    return
+    try:
+        images = con.connect_db()
+        if isinstance(images, dict):
+           return images    # if error
 
-app.run(port=5002)
+        # get
+        mydict = {"name": "John", "address": "Highway 37"}
+        x = mycol.insert_one(mydict)
+
+    except Exception as e:
+        return {"isError": True, "errorMessage": "An Exception has occured"}
+
+    return json.dumps({"isError": False})
+
+app.run(port=5003)
