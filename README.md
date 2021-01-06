@@ -27,7 +27,6 @@ These endpoints can be accessed via the [website](https://dog-image-repository.n
 - Docker (version 18.09.1)
 - Python (version 3.7)
 - MongoDB (version 4.0.0)
-- Postman (version 6.7.1)
 
 **Setting Up Server**
 
