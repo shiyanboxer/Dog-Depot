@@ -21,8 +21,9 @@
 4. Upload images to bucket
 5. Make all images public (so it can be accessed by object url)
 
-- [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
+[S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg)
 
+- [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
 ### Day 5: Setup MongoDB Atlas and Connect AWS S3
 **Create database on MongoDB Atlas**
@@ -30,6 +31,7 @@
 2. Deploy cluster and connect url in mongo db compass (desktop application)
 3. Add images manually into repository using the object url link in Amazon S3
 
+[MongoDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MongoDB.jpg)
 
 ### Day 6: Develop Flask API and Connect to Database
 **Code in Flask API**
@@ -44,8 +46,9 @@ python app.py
 http://127.0.0.1:5000/
 ```
 
-- [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
+[TestAPI](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/TestAPI.jpg)
 
+- [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
 
 ### Day 7: Create React App, Develop Home API, and Connect the Two
 **Import Python CORS** to run front and backend on separate local servers
