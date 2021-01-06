@@ -15,18 +15,22 @@ def upload():
     Upload image to database
     :return: if no error, return if error return isError is True and an error message
     """
+    # https://www.w3schools.com/python/python_mongodb_insert.asp
     try:
         images = con.connect_db()
         if isinstance(images, dict):
            return images    # if error
 
-        # get
-        mydict = {"name": "John", "address": "Highway 37"}
-        x = mycol.insert_one(mydict)
+        # get input from user
+        input = {"Author": "",
+                 "ImageName": "",
+                 "Tag": "",
+                 "URL": ""}
+        # insert image in the database using the metadata given by user
+        x = images.insert_one(input)
 
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
-
     return json.dumps({"isError": False})
 
 app.run(port=5003)

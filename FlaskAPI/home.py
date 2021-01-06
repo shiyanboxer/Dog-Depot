@@ -15,7 +15,7 @@ def home():
     Load images from database on home screen
     :return: images
     """
-    # https://www.w3schools.com/python/python_mongodb_insert.asp
+    # https://www.w3schools.com/python/python_mongodb_find.asp
     try:
         images = con.connect_db()
         if isinstance(images, dict):
@@ -24,7 +24,7 @@ def home():
         result = []
         cursor = images.find({})
         for i in cursor:
-            each_list = {"URL":i["URL"], "ImageName":i["ImageName"], "Author":i["Author"]}
+            each_list = {"URL":i["URL"], "ImageName":i["ImageName"], "Author":i["Author"], "Tag":i["Tag"]}
             result.append(each_list)
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
