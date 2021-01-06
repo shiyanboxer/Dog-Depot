@@ -21,7 +21,7 @@
 4. Upload images to bucket
 5. Make all images public (so it can be accessed by object url)
 
-![S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg =300x300)
+![S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg)
 
 - [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
@@ -31,7 +31,7 @@
 2. Deploy cluster and connect url in mongo db compass (desktop application)
 3. Add images manually into repository using the object url link in Amazon S3
 
-![MongoDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MongoDB.jpg)
+![MDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MDB.jpg)
 
 ### Day 6: Develop Flask API and Connect to Database
 **Code in Flask API**
@@ -48,6 +48,15 @@ http://127.0.0.1:5000/
 
 ![TestAPI](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/TestAPI.jpg)
 
+**Connect Database**
+```
+from pymongo import MongoClient
+client = MongoClient()
+client = MongoClient('mongodb://localhost:27017/')
+db = client['test-database']
+collection = db['test-collection']
+```
+- [Connect DB)(https://pymongo.readthedocs.io/en/stable/tutorial.html)
 - [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
 
 ### Day 7: Create React App, Develop Home API, and Connect the Two
