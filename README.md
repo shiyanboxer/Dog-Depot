@@ -22,10 +22,32 @@ These endpoints can be accessed via the [website](https://dog-image-repository.n
 ## Demo Video
 
 ## Quickstart
-```
-npm install
-pip install -r requirements.txt
-```
+
+### Requirements
+- Docker (version 18.09.1)
+- Python (version 3.7)
+- MongoDB (version 4.0.0)
+- Postman (version 6.7.1)
+
+**Setting Up Server**
+
+1. Build and link containers for Mongod DB and Python app 
+
+`docker-compose up --build -d`
+
+2. Seed the database with initial images
+
+`docker exec -it webAPI npm run seed`
+
+3. Browse using the local host link
+
+`localhost:3000/`!
+
+**Stopping Server**
+
+1. Type below command to stop Mongod DB containers and Python app 
+
+`docker-compose stop`
 
 ## Technologies
 - **API:** Python, Flask, Pymongo
@@ -36,3 +58,6 @@ pip install -r requirements.txt
 - **Testing:** CirclCI, Postman
 - **IDE:** Pycharm
 - **Deployment:** Heroku, Netlify
+
+## Troubleshooting
+If any problems arise please contact shiyanboxer7@gmail.com.
