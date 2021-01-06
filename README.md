@@ -1,1 +1,37 @@
-# Image-Repository
+# Image Repository
+
+- #### By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)
+- #### Last Updated: January 17th, 2020
+- #### [Website Link](https://dog-image-repository.netlify.app/)
+- #### [API Link](https://image-repository-by-shiyan.herokuapp.com/)
+- #### [Documentation]()
+   - **[Software Architecture]()**
+   - **[Steps]()**
+   - **[Test, Contribute, Version, and Learning Resources]()**
+
+## Project Overview
+This image repository stores jpg photos of dogs in a MongoDB database using AWS S3 storage. There are 4 API endpoints that allow you to interact with the backend including: 
+1. **Upload** - upload a single image to the database
+2. **Delete** - remove a single image from the database
+3. **Search** - using the search bar, find images based on id, author, image name, and tag, url
+4. **Home** - render all images in database on the home page
+
+These endpoints can be accessed via the [website](https://dog-image-repository.netlify.app/) or the [heroku link](https://image-repository-by-shiyan.herokuapp.com/).
+
+## Demo Video
+
+## Quickstart
+```
+npm install
+pip install -r requirements.txt
+```
+
+## Technologies
+- **API:** Python, Flask, Pymongo
+- **Database:** MongoDB
+- **Storage:** AWS S3
+- **Frontend:** React, Javascript, MBDReact, Axions
+- **Containers:** Docker
+- **Testing:** CirclCI, Postman
+- **IDE:** Pycharm
+- **Deployment:** Heroku, Netlify
