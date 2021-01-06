@@ -21,7 +21,7 @@
 4. Upload images to bucket
 5. Make all images public (so it can be accessed by object url)
 
-![S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg)
+![S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg =400x500)
 
 - [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
