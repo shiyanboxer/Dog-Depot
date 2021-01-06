@@ -1,5 +1,10 @@
 # Image Repository
 
+## TODO
+- Demo Video
+- Quickstart
+- 
+  
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
 - **[Website Link](https://dog-image-repository.netlify.app/)**
@@ -49,7 +54,7 @@ These endpoints can be accessed via the [website](https://dog-image-repository.n
 `docker-compose stop`
 
 ## Technologies
-- **API:** Python, Flask, Pymongo
+- **API:** Python, Flask, dnspython, pymongo, CORS
 - **Database:** MongoDB
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions

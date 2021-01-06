@@ -12,6 +12,8 @@
 - Create plan of execution and timeline
 
 ### Day 4: Setup AWS S3 Storage and Add Initial Images
+**Notes:** Unit tests, integrations tests, debugging, and documentation were done throughout the development process.
+
 **Create AWS S3 storage (create bucket)**
 1. Unique name: imagerepositorybyshiyanboxer
 2. Block all public access
@@ -59,6 +61,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 ```
+**Connect Databse**
+- install pymongo
+- 
+
+**Browser Router**
+- install dnspython
+- create routes.js
+
 **Home API**
 
 **Test API using Postman**
