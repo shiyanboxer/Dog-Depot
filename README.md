@@ -3,8 +3,7 @@
 ## TODO
 - Demo Video
 - Quickstart
-- 
-  
+
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
 - **[Website Link](https://dog-image-repository.netlify.app/)**

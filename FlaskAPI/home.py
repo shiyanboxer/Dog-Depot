@@ -20,17 +20,13 @@ def home():
     try:
         # Connect MongoDB cluster database. Object of cluster
         # client = pymongo.MongoClient("mongodb+srv://shiyanboxer:NewPass@cluster0.qd7ht.mongodb.net/test")
-
         images = con.connect_db()
-
         if isinstance(images, dict):
            return images    # if error
 
         result = []
-
         cursor = images.find({})
         for i in cursor:
-
             each_list = {"URL":i["URL"], "ImageName":i["ImageName"], "Author":i["Author"]}
             result.append(each_list)
 

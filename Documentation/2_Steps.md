@@ -48,15 +48,16 @@ http://127.0.0.1:5000/
 
 ![TestAPI](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/TestAPI.jpg)
 
-**Connect Database**
+**Connect Database (Connect.py)**
 ```
+install pymongo
 from pymongo import MongoClient
 client = MongoClient()
 client = MongoClient('mongodb://localhost:27017/')
 db = client['test-database']
 collection = db['test-collection']
 ```
-- [Connect DB)(https://pymongo.readthedocs.io/en/stable/tutorial.html)
+- [Connect DB](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 - [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
 
 ### Day 7: Create React App, Develop Home API, and Connect the Two
@@ -73,18 +74,25 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 ```
-**Connect Databse**
-- install pymongo
-- 
 
 **Browser Router**
 - install dnspython
 - create routes.js
 
-**Home API**
+**Home API (Home.py and Home.js)**
+- iterate over the elements in the database and display them in React Cards on the homescreen
 
-**Test API using Postman**
-  
+**Test API using React App**
+- run flask api on local server 
+```
+cd FlaskAPI
+python home.py
+```
+- run react on seperate local server. If imagese load on the home page, then success! 
+```
+npm start
+```
+
 - [React App](https://reactjs.org/docs/create-a-new-react-app.html)
 - [MDBReact](https://www.npmjs.com/package/mdbreact)
 - [Navbar and search](https://mdbootstrap.com/docs/react/navigation/navbar/)
