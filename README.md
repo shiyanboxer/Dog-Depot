@@ -30,7 +30,7 @@ These endpoints can be accessed via the [website](https://dog-image-repository.n
 
 **Setting Up Server**
 
-1. Build and link containers for Mongod DB and Python app 
+1. Build and link containers for MongoDB and Python app 
 
 `docker-compose up --build -d`
 
