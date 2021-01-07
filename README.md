@@ -16,7 +16,7 @@
    - **[Task](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/4_Task.md)**
 
 ## Project Overview
-This image repository stores jpg photos of dogs in a MongoDB database using AWS S3 storage. There are 4 API endpoints that allow you to interact with the backend including: 
+This image repository stores jpg photos of dogs in a MongoDB database using AWS S3 storage. There are 3 API endpoints that allow you to interact with the backend including: 
 1. **Upload** - upload a single image to the database
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
