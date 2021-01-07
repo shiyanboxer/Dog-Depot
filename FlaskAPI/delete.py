@@ -27,6 +27,7 @@ def delete():
 
         # querry
         myquery = {"ImageName": "inputImageName"}
+
         # delete image from db
         images.delete_one(myquery)
 

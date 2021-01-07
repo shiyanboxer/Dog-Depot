@@ -12,7 +12,7 @@ class Home extends React.Component{
     componentDidMount() {
         axios({
             method: "GET",
-            url: "http://127.0.0.1:5000/"
+            url: "http://127.0.0.1:5001/"
         }).then((response)=> {
             if (response.data.isError === false) {
                 const new_data = response.data.result
