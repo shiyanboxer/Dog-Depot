@@ -3,29 +3,26 @@ import Card from "./Card";
 import axios from "axios";
 import "../CSS/App.css"
 
-class Home extends React.Component{
+class Home extends React.Component {
     // Only is called when Home component is mounted (once)
 
     state = {
-        content:[],
-        receivedResponse:false
+        content: [],
+        receivedResponse: false
     }
+
     componentDidMount() {
         axios({
             method: "GET",
             url: "http://127.0.0.1:5001/"
-        }).then((response)=> {
+        }).then((response) => {
             if (response.data.isError === false) {
                 const new_data = response.data.result
-
-                this.setState( {content:new_data,receivedResponse:true})
-            }
-            else {
+                this.setState({content: new_data, receivedResponse: true})
+            } else {
                 alert(response.data.errorMessage)
             }
-
         })
-
     }
 
     render() {
@@ -33,17 +30,15 @@ class Home extends React.Component{
         return (
             <div className="container">
                 <div className="row">
-                    {this.state.receivedResponse?
-                        this.state.content.map((item, index)=>(
+                    {this.state.receivedResponse ?
+                        this.state.content.map((item, index) => (
                             <div className="col-md-4">
                                 <Card src={item.URL} title={item.ImageName}></Card>
                             </div>
                         ))
-                    :
+                        :
                         null
                     }
-
-
                 </div>
             </div>
         );

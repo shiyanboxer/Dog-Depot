@@ -2,14 +2,15 @@
 .card {
   width: 100%;
   object-fit: cover;
-  border-radius: 20px; /* 5px rounded corners */
+  border-radius: 5px; /* 5px rounded corners */
   padding: 2px;
   margin-top: 3em;
-  background-color: #fefefe; /* charcoal */
-  color: #151515; /* off white */
+  background-color: #fefefe; /* white */
+  color: #151515; /* black */
 }
 
 #card-img {
     height: 15vw;
     width: 100%;
+    border-radius: 5px; /* 5px rounded corners */
 }

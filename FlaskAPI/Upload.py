@@ -7,10 +7,13 @@ import pymongo
 import Connection as con
 from flask_cors import CORS
 
+# import env
+
 app = flask.Flask(__name__)
 cors = CORS(app)
 
 app.config["DEBUG"] = True
+
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -20,26 +23,20 @@ def upload():
     """
     # https://www.w3schools.com/python/python_mongodb_insert.asp
 
-    """
-  
-
-    
-
-    """
     data = json.loads(request.data)
     author = data["Author"]
     ImageName = data["ImageName"]
     tag = data["Tag"]
-    FileName = data["FileName"].replace("\\","\\\\")
+    FileName = data["FileName"].replace("\\", "\\\\")
     name = data["file_name"]
 
     client = boto3.client(
         's3',
-        aws_access_key_id="AKIAU5CUYFZ5RJEECB5N",
-        aws_secret_access_key="KE718fkdaF5AKbL4iBr6s1C9JDf0IQWo5SZNBhHv"
+        aws_access_key_id="AKIAU5CUYFZ5YV27HRF6",
+        aws_secret_access_key="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"
     )
-    Bucket = "imagerepositorybyshiyanboxer"
 
+    Bucket = "imagerepositorybyshiyanboxer"
     # upload image to S3 (specify content "ContentType": "image/jpeg")
     client.upload_file(FileName, Bucket, name,
                        ExtraArgs={'ACL': 'public-read', "ContentType": "image/jpeg"})
@@ -49,11 +46,10 @@ def upload():
     try:
         images = con.connect_db()
         if isinstance(images, dict):
-            return images    # if error
+            return images  # if error
 
-        my_dict = {"ImageName":ImageName,"Tag":tag,"URL":url,"Author":author}
+        my_dict = {"ImageName": ImageName, "Tag": tag, "URL": url, "Author": author}
         images.insert_one(my_dict)
-
 
         # upload image to S3
         # get the object url from S3
@@ -63,6 +59,7 @@ def upload():
 
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
-    return json.dumps({"isError": False,"successMessage":"File uploaded successfully"})
+    return json.dumps({"isError": False, "successMessage": "File uploaded successfully"})
+
 
 app.run(port=5003)

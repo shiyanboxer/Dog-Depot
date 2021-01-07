@@ -23,6 +23,7 @@
 
 ![S3](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/S3.jpg)
 
+- [AWS S3](https://s3.console.aws.amazon.com/s3/home?region=ca-central-1)
 - [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
 ### Day 5: Setup MongoDB Atlas and Connect AWS S3
@@ -30,6 +31,8 @@
 1. Create a cluster and database  in MongoDB Atlas
 2. Deploy cluster and connect url in mongo db compass (desktop application)
 3. Add images manually into repository using the object url link in Amazon S3
+
+-[MongoDB](https://www.mongodb.com/3)
 
 ![MDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MDB.jpg)
 
@@ -81,6 +84,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 **Home API (Home.py and Home.js)**
 - Iterate over the elements in the database and display them in React Cards on the homescreen
+- Render images only once when the home page is loaded
 
 **Test API using React App**
 - Run flask api on local server 
@@ -124,8 +128,8 @@ npm start
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Delete document](https://www.w3schools.com/python/python_mongodb_delete.asp)
 
-### Day 9: Develop Search API and Connect to Frontend
-**Search API** 
+### Day 9: Develop SearchPage API and Connect to Frontend
+**SearchPage API** 
 - Using the Home.py code
 
 **Test API using Postman and Homescreen**
