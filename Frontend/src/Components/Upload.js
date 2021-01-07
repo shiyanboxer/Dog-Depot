@@ -1,7 +1,6 @@
 import React from "react"
 import {MDBContainer, MDBRow, MDBCol, MDBBtn} from 'mdbreact';
 import axios from "axios";
-import Card from "./Card";
 
 class Upload extends React.Component {
     uploader() {

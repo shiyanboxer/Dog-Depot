@@ -1,15 +1,16 @@
 /* footer link */
 a:link, a:visited {
-  color: #fefefe; /* off white */
+    color: #fefefe; /* off white */
 }
+
 a:hover, a:active {
-  color: #0000ff; /* blue */
+    color: #0000ff; /* blue */
 }
 
 /* footer */
 .footer {
-  text-align: center;
-  align-items: center;
-  font-size: 25px;
-  padding: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 30px;
 }

@@ -4,14 +4,14 @@ import Home from "./Home"
 import Upload from "./Upload";
 import Search from "./Search";
 
-class Routes extends React.Component{
+class Routes extends React.Component {
     render() {
         return (
             <div>
                 <Switch>
-                <Route exact path="/" component={Home}></Route>
-                <Route exact path="/upload" component={Upload}></Route>
-                <Route exact path="/search" component={Search}></Route>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/upload" component={Upload}></Route>
+                    <Route exact path="/search" component={Search}></Route>
                 </Switch>
             </div>
         );

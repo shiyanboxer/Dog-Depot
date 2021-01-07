@@ -4,8 +4,6 @@ import axios from "axios";
 import "../CSS/Search.css"
 import Card from "./Card";
 
-// https://mdbootstrap.com/docs/react/forms/search/
-
 class Search extends React.Component {
     // When the search button is clicked, send info in text to backend and render results on screen
     state = {

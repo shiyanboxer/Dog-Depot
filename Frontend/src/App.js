@@ -8,17 +8,17 @@ import Routes from "./Components/Routes"
 import Footer from "./Components/Footer";
 
 function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <div className="App">
-          <Navbar/>
-          <Routes/>
-           <Footer/>
+    return (
+        <div>
+            <BrowserRouter>
+                <div className="App">
+                    <Navbar/>
+                    <Routes/>
+                    <Footer/>
+                </div>
+            </BrowserRouter>
         </div>
-      </BrowserRouter>
-    </div>
-  );
+    );
 }
 
 export default App;

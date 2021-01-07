@@ -1,13 +1,14 @@
 /*overall style*/
 .App {
-  background-color: #151515; /* charcoal */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  text-align: center;
+    background-color: #151515; /* charcoal */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    text-align: center;
 }
+
 .upload {
-  padding-top: 100px;
+    padding-top: 100px;
 }

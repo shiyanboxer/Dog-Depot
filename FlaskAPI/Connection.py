@@ -1,5 +1,6 @@
 import pymongo
 
+
 def connect_db():
     """
     Connects Mongo DB cluster database so it can be accessed by APIS
