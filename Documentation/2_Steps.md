@@ -76,19 +76,19 @@ import 'mdbreact/dist/css/mdb.css';
 ```
 
 **Browser Router**
-- install dnspython
-- create routes.js
+- Install dnspython
+- Create routes.js
 
 **Home API (Home.py and Home.js)**
-- iterate over the elements in the database and display them in React Cards on the homescreen
+- Iterate over the elements in the database and display them in React Cards on the homescreen
 
 **Test API using React App**
-- run flask api on local server 
+- Run flask api on local server 
 ```
 cd FlaskAPI
 python home.py
 ```
-- run react on seperate local server. If imagese load on the home page, then success! 
+- Run react on seperate local server. If imagese load on the home page, then success! 
 ```
 npm start
 ```
@@ -100,23 +100,42 @@ npm start
 - [Python MongoDB Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Python API with Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
-### Day 8: Develop Delete, Upload API and Connect to Frontend
-- **Delete API**
-- **Upload API**
-- **Test API using Postman**
+### Day 8: Develop Upload API and Connect to Frontend
+**Upload API**
+1. Create Upload.py and Upload.js files
+2. Add upload in route.js and navbar directory
+3. Create simple form in Upload js for user to input metadata and upload file
+4. Install boto3 for uploading files to S3 (react gives back fake file)
+5. Create a new user in AWS with S3 and Admin permissions using "Attach existing policies" and get Access codes
+6. Test in Jupyter to see if boto3 will upload files in S3 (need to specify ContentType = image/jpeg)
+7. Add this code in API
+8. Connect frontend to API using axios const variables and onClick
+9. Manipulate file path name so it can be used in S3 
+10. Get the object url from S3
+11. Get input from user and add to MongoDB
 
+**Test API using Postman, Homescreen, MongoDB, S3**
+1. Check Postman using API local host link to see if request is working 
+2. Check S3 to see if new image entry is in storage
+3. Check MongoDB Cluster to see if new image entry is in the database
+4. Lastly, check if the newly uploaded image is rendered on the homescreen
+
+- [AWS User](https://console.aws.amazon.com/iam/home#/users)
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Delete document](https://www.w3schools.com/python/python_mongodb_delete.asp)
 
 ### Day 9: Develop Search API and Connect to Frontend
-- **Search API**
-- **Test API using Postman**
+**Search API** 
+- Using the Home.py code
+
+**Test API using Postman**
 
 ### Day 10: Testing and Debugging
-- **Test API using Postman**
+**Test API using Postman**
 
-### Day 11: Docker
+### Day 11: Docker and Kubernetes
 
 ### Day 12: Deploy to Heroku and Netlify
-- **Deploy to API Heroku**
-- **Deploy react app to Netlify**
+**Deploy to API Heroku**
+
+**Deploy react app to Netlify**
