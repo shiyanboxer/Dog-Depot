@@ -159,9 +159,23 @@ npm start
 
 **SearchPage API**
 
-- Using the Home.py code
+- Find forms component in mdbreact https://mdbootstrap.com/docs/react/forms/basic/
+- Route Search path by adding routing and connecting search .JS to .Py
+- Create CSS Search file, style search page, and connect to JS
+- Add functionality to Search button onClick to send user info to API, add id, and change type to text
+- Add Axios in Search JS to assign input into const variables for the onCilick id, response print success or error
+  message and displays found images on screen
+- In search.py using request get all the input from the user (data = json.loads(request.data)), connect to the database,
+  find photos that meet the users search, and return a result list of those images
+- Similar to home JS, in search JS add state, in axios function, change content to new_data, and add card container
+  component that renders when the “search” button is successfully completed.
 
-**Test API using Postman and Homescreen**
+```  
+const new_data = response.data.result
+this.setState({content: new_data, receivedResponse: true})
+```
+
+**Test API using Postman and Search page**
 
 ### Day 10: Docker and Kubernetes
 
