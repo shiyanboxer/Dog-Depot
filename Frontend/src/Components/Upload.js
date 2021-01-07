@@ -30,11 +30,10 @@ class Home extends React.Component{
     }
     render() {
         return (
-            <MDBContainer>
+            <MDBContainer className="upload">
                 <MDBRow>
-                    <MDBCol md="6">
+                    <MDBCol md="12">
                       <form>
-                        <p className="h4 text-center mb-4">Upload</p>
                         <label htmlFor="Author" className="grey-text">
                           Author
                         </label>
@@ -44,13 +43,11 @@ class Home extends React.Component{
                           Image Name
                         </label>
                         <input type="text" id="ImageName" className="form-control" />
-
                         <br />
                         <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
                           Tag
                         </label>
                         <input type="text" id="Tag" className="form-control" />
-
                         <br />
                         <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
                         </label>

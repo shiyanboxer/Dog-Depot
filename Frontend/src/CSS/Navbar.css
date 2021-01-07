@@ -1,0 +1,16 @@
+/*search bar*/
+.searchBar{
+  float: left;
+  /*display: block;*/
+  color: black;
+  display: flex;
+  text-align: center;
+  padding-right: 235px;
+  font-size: 20px;
+}
+
+/*nav bar*/
+.navbar {
+  float: left;
+  font-size: 25px;
+}

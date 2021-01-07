@@ -1,6 +1,7 @@
 import React from "react"
 import Card from "./Card";
 import axios from "axios";
+import "../CSS/App.css"
 
 class Home extends React.Component{
     // Only is called when Home component is mounted (once)
