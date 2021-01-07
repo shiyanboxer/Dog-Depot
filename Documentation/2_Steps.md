@@ -128,14 +128,11 @@ npm start
 **Search API** 
 - Using the Home.py code
 
-**Test API using Postman**
+**Test API using Postman and Homescreen**
 
-### Day 10: Testing and Debugging
-**Test API using Postman**
+### Day 10: Docker and Kubernetes
 
-### Day 11: Docker and Kubernetes
 
-### Day 12: Deploy to Heroku and Netlify
-**Deploy to API Heroku**
-
-**Deploy react app to Netlify**
+### Day 11: Deploy to Heroku and Netlify
+- Deploy to API Heroku
+- Deploy react app to Netlify

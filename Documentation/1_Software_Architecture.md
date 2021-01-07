@@ -23,17 +23,6 @@
 }
 ```
 
-### Delete
-- **GET:** https://image-repository-by-shiyan.herokuapp.com/upload/
-- **FUNCTION:** Delete
-- **DESCRIPTION:** remove a single image from the database
-- **EXAMPLE RESPONSE:**
-```
-{
-    "hello world"
-}
-```
-
 ### Search 
 - **GET:** https://image-repository-by-shiyan.herokuapp.com/upload/
 - **FUNCTION:** Search 
