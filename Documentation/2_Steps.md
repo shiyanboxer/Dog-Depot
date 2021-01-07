@@ -159,7 +159,7 @@ npm start
 
 **SearchPage API**
 
-- Find forms component in mdbreact https://mdbootstrap.com/docs/react/forms/basic/
+- Find forms component in mdbreact
 - Route Search path by adding routing and connecting search .JS to .Py
 - Create CSS Search file, style search page, and connect to JS
 - Add functionality to Search button onClick to send user info to API, add id, and change type to text
@@ -176,6 +176,8 @@ this.setState({content: new_data, receivedResponse: true})
 ```
 
 **Test API using Postman and Search page**
+
+- [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
 ### Day 10: Docker and Kubernetes
 
