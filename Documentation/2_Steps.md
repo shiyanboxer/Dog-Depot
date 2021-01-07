@@ -1,11 +1,11 @@
 # Steps
 
-### Day 1: Research & Outline
+## Day 1: Research & Outline
 
 - Research and compare existing solutions
 - Outline scope
 
-### Day 2: Research Technologies
+## Day 2: Research Technologies
 
 - Research and compare technologies
 
@@ -14,7 +14,7 @@
 - Create software architecture, UI diagram, API endpoints, Image metadata
 - Create plan of execution and timeline
 
-### Day 4: Setup AWS S3 Storage and Add Initial Images
+## Day 4: Setup AWS S3 Storage and Add Initial Images
 
 **Notes:** Unit tests, integrations tests, debugging, and documentation were done throughout the development process.
 
@@ -31,7 +31,7 @@
 - [AWS S3](https://s3.console.aws.amazon.com/s3/home?region=ca-central-1)
 - [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
-### Day 5: Setup MongoDB Atlas and Connect AWS S3
+## Day 5: Setup MongoDB Atlas and Connect AWS S3
 
 **Create database on MongoDB Atlas**
 
@@ -43,7 +43,7 @@
 
 ![MDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MDB.jpg)
 
-### Day 6: Develop Flask API and Connect to Database
+## Day 6: Develop Flask API and Connect to Database
 
 **Code in Flask API**
 
@@ -77,7 +77,7 @@ collection = db['test-collection']
 - [Error Handeling with Pymongo](https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html)
 - [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
 
-### Day 7: Create React App, Develop Home API, and Connect the Two
+## Day 7: Create React App, Develop Home API, and Connect the Two
 
 **Import Python CORS** to run front and backend on separate local servers
 
@@ -128,7 +128,7 @@ npm start
 - [Python MongoDB Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Python API with Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
-### Day 8: Develop Upload API and Connect to Frontend
+## Day 8: Develop Upload API and Connect to Frontend
 
 **Upload API**
 
@@ -155,7 +155,7 @@ npm start
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Delete document](https://www.w3schools.com/python/python_mongodb_delete.asp)
 
-### Day 9: Develop SearchPage API and Connect to Frontend
+## Day 9: Develop SearchPage API and Connect to Frontend
 
 **SearchPage API**
 
@@ -179,11 +179,11 @@ this.setState({content: new_data, receivedResponse: true})
 
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
-### Day 10: Docker and Kubernetes
+## Day 10: Docker and Kubernetes
 
-### Day 11: Unit Tests and Debugging
+## Day 11: Unit Tests and Debugging
 
-### Day 12: Deploy to Heroku and Netlify
+## Day 12: Deploy to Heroku and Netlify
 
 - Deploy to API Heroku
 - Deploy react app to Netlify
