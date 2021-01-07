@@ -1,5 +1,6 @@
 import React from "react"
 import {MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
+import "../CSS/Navbar.css"
 
 class NavBar extends React.Component{
   state = {
@@ -26,12 +27,8 @@ toggleCollapse = () => {
             <MDBNavItem>
               <MDBNavLink to="/upload">Upload</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/delete">Delete</MDBNavLink>
-            </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
-
             <MDBNavItem>
               <MDBFormInline waves>
                 <div className="searchBar" >
