@@ -1,14 +1,68 @@
+import re
+import json
+import boto3
 import flask
+from flask import request
+import pymongo
+import Connection as con
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+cors = CORS(app)
+
 app.config["DEBUG"] = True
 
-@app.route('delete/', methods=['GET'])
-def delete():
+@app.route('/upload', methods=['POST'])
+def upload():
     """
-    Load images on home screen
-    :return: images
+    Upload image to database
+    :return: if no error, return if error return isError is True and an error message
     """
-    return
+    # https://www.w3schools.com/python/python_mongodb_insert.asp
 
-app.run(port=5002)
+    """
+  
+
+    
+
+    """
+    data = json.loads(request.data)
+    author = data["Author"]
+    ImageName = data["ImageName"]
+    tag = data["Tag"]
+    FileName = data["FileName"].replace("\\","\\\\")
+    name = data["file_name"]
+
+    client = boto3.client(
+        's3',
+        aws_access_key_id="AKIAU5CUYFZ5RJEECB5N",
+        aws_secret_access_key="KE718fkdaF5AKbL4iBr6s1C9JDf0IQWo5SZNBhHv"
+    )
+    Bucket = "imagerepositorybyshiyanboxer"
+
+    # upload image to S3 (specify content "ContentType": "image/jpeg")
+    client.upload_file(FileName, Bucket, name,
+                       ExtraArgs={'ACL': 'public-read', "ContentType": "image/jpeg"})
+
+    location = client.get_bucket_location(Bucket="imagerepositorybyshiyanboxer")["LocationConstraint"]
+    url = "https://{}.s3.{}.amazonaws.com/{}".format(Bucket, location, name)
+    try:
+        images = con.connect_db()
+        if isinstance(images, dict):
+            return images    # if error
+
+        my_dict = {"ImageName":ImageName,"Tag":tag,"URL":url,"Author":author}
+        images.insert_one(my_dict)
+
+
+        # upload image to S3
+        # get the object url from S3
+        # get input from user and add to mongodb
+        # # insert image in the database using the metadata given by user
+        # x = images.insert_one(input)
+
+    except Exception as e:
+        return {"isError": True, "errorMessage": "An Exception has occured"}
+    return json.dumps({"isError": False,"successMessage":"File uploaded successfully"})
+
+app.run(port=5003)

@@ -53,7 +53,7 @@ These endpoints can be accessed via the [website](https://dog-image-repository.n
 `docker-compose stop`
 
 ## Technologies
-- **API:** Python, Flask, dnspython, pymongo, CORS
+- **API:** Python, Flask, dnspython, pymongo, CORS, request
 - **Database:** MongoDB
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions
