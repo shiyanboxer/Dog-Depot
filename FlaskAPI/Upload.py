@@ -3,7 +3,6 @@ import json
 import boto3
 import flask
 from flask import request
-import pymongo
 import Connection as con
 from flask_cors import CORS
 
