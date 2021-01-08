@@ -120,6 +120,8 @@ npm start
 ```
 
 - [React App](https://reactjs.org/docs/create-a-new-react-app.html)
+- [React Tutorial](https://www.youtube.com/watch?v=DLX62G4lc44)
+- [React Documentation](https://reactjs.org/tutorial/tutorial.html)  
 - [MDBReact](https://www.npmjs.com/package/mdbreact)
 - [Navbar and search](https://mdbootstrap.com/docs/react/navigation/navbar/)
 - [Cards](https://mdbootstrap.com/docs/react/components/cards/) use maps to iterate over the entire database and display
@@ -180,6 +182,9 @@ this.setState({content: new_data, receivedResponse: true})
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
 ## Day 10: Docker and Kubernetes
+
+- [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
+- [Docker Documentation](https://docs.docker.com/get-started/)
 
 ## Day 11: Unit Tests and Debugging
 
