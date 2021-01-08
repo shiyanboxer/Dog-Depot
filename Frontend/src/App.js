@@ -12,7 +12,6 @@ function App() {
         <div>
             <BrowserRouter>
                 <div className="App">
-                    <Navbar/>
                     <Routes/>
                     <Footer/>
                 </div>

@@ -23,9 +23,7 @@ def search():
 
     # Get data from frontend and assign to variables
     data = json.loads(request.data)  # this is a dictionary with the users input
-    author = data["Author"]  # break each entry down
-    imageName = data["ImageName"]
-    tag = data["Tag"]
+    search_text = data["search_text"].lower()
 
     # Connect to the database
     try:
@@ -34,16 +32,13 @@ def search():
             return images  # if there is an error connection to DB, return error message in Connection.py
 
         # Find all images in database that satisfy search criteria
-        cursor = images.find({
-            "Author": author,
-            "ImageName": imageName,
-            "Tag": tag
-        })
+        cursor = images.find({})
         # Create an array "result" that will contain all entries in database that satisfy search criteria
         result = []
         for i in cursor:
-            each_list = {"URL": i["URL"], "ImageName": i["ImageName"], "Author": i["Author"], "Tag": i["Tag"]}
-            result.append(each_list)  # Display the images in result on screen
+            if  search_text in i["Tag"].lower() or search_text in i["Author"].lower() or search_text in i["ImageName"].lower():
+                each_list = {"URL": i["URL"], "ImageName": i["ImageName"], "Author": i["Author"], "Tag": i["Tag"]}
+                result.append(each_list)  # Display the images in result on screen
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
     return json.dumps({"isError": False, "result": result})

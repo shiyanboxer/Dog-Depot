@@ -5,8 +5,7 @@ import flask
 from flask import request
 import Connection as con
 from flask_cors import CORS
-
-# import env
+import env as env
 
 app = flask.Flask(__name__)
 cors = CORS(app)
@@ -31,8 +30,8 @@ def upload():
 
     client = boto3.client(
         's3',
-        aws_access_key_id="AKIAU5CUYFZ5YV27HRF6",
-        aws_secret_access_key="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"
+        aws_access_key_id=env.aws_public,
+        aws_secret_access_key=env.aws_secret
     )
 
     Bucket = "imagerepositorybyshiyanboxer"

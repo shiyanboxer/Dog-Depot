@@ -25,6 +25,7 @@ class NavBar extends React.Component {
         );
     }
 
+
     render() {
         return (
             // background color of nav bar
@@ -45,6 +46,16 @@ class NavBar extends React.Component {
                             <MDBNavLink to="/search">Search</MDBNavLink>
                         </MDBNavItem>
                     </MDBNavbarNav>
+                    {/*Search bar*/}
+                      <MDBNavbarNav right>
+                        <MDBNavItem>
+                          <MDBFormInline waves>
+                            <div className="md-form my-0">
+                              <input className="form-control mr-sm-2" onChange={this.props.functionCall} type="text" placeholder="Search" aria-label="Search" />
+                            </div>
+                          </MDBFormInline>
+                        </MDBNavItem>
+                      </MDBNavbarNav>
 
                 </MDBCollapse>
             </MDBNavbar>
