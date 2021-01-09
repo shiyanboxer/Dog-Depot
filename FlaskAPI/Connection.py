@@ -14,7 +14,7 @@ def connect_db():
         client = pymongo.MongoClient("mongodb+srv://shiyanboxer:NewPass@cluster0.qd7ht.mongodb.net/test")
         # get instance of the database
         db = client["ImageRepository"]
-        # getting a collection (group of documents stored in MongoDB)
+        # getting a collection (group of documents stored  in MongoDB)
         images = db["images"]
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
