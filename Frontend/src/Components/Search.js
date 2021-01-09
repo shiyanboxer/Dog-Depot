@@ -1,7 +1,6 @@
 import React from "react";
 import {MDBContainer, MDBRow, MDBCol, MDBBtn} from 'mdbreact';
 import axios from "axios";
-import "../CSS/Search.css"
 import Card from "./Card";
 
 class Search extends React.Component {
@@ -17,8 +16,8 @@ class Search extends React.Component {
         const in_imageName = document.getElementById("ImageName").value
         const in_tag = document.getElementById("Tag").value
 
-        // Check to see it works by printing results in console on click
-        // console.log(in_author + in_imageName + in_tag)
+        // Check to see if user values are getting passed and stored in variables by printing
+        console.log(in_author + in_imageName + in_tag)
 
         axios({
             method: "POST",
@@ -40,6 +39,7 @@ class Search extends React.Component {
     }
 
     render() {
+        // console.log("State" + this.state.content)
         return (
             <MDBContainer className="upload">
                 <MDBRow>
@@ -66,9 +66,12 @@ class Search extends React.Component {
                         </form>
                     </MDBCol>
                 </MDBRow>
+
                 <MDBRow>
                     <div className="container">
                         <div className="row">
+                            {/*If the state of the receivedResponse is true, then iterate through*/}
+                            {/*the results and display these results in cards*/}
                             {this.state.receivedResponse ?
                                 this.state.content.map((item, index) => (
                                     <div className="col-md-4">
@@ -81,6 +84,7 @@ class Search extends React.Component {
                         </div>
                     </div>
                 </MDBRow>
+
             </MDBContainer>
         );
     }

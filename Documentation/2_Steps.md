@@ -1,20 +1,24 @@
 # Steps
 
-## Day 1: Research & Outline
+## Step 1: Research & Outline
 
 - Research and compare existing solutions
 - Outline scope
 
-## Day 2: Research Technologies
+## Step 2: Compare Technologies
 
 - Research and compare technologies
 
-### Day 3: Plan and Design Software Architecture
+## Step 3: Design Software Architecture
 
 - Create software architecture, UI diagram, API endpoints, Image metadata
+- See Software Architecture documentation  
+
+## Step 4: Design Software Architecture
+
 - Create plan of execution and timeline
 
-## Day 4: Setup AWS S3 Storage and Add Initial Images
+## Step 5: Setup AWS S3 Storage and Add Initial Images
 
 **Notes:** Unit tests, integrations tests, debugging, and documentation were done throughout the development process.
 
@@ -31,7 +35,7 @@
 - [AWS S3](https://s3.console.aws.amazon.com/s3/home?region=ca-central-1)
 - [How to upload a file to S3 and make it public using boto3?](https://stackoverflow.com/questions/41904806/how-to-upload-a-file-to-s3-and-make-it-public-using-boto3)
 
-## Day 5: Setup MongoDB Atlas and Connect AWS S3
+## Step 6: Setup MongoDB Atlas and Connect AWS S3
 
 **Create database on MongoDB Atlas**
 
@@ -43,7 +47,7 @@
 
 ![MDB](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/MDB.jpg)
 
-## Day 6: Develop Flask API and Connect to Database
+## Step 7: Develop Flask API and Connect to Database
 
 **Code in Flask API**
 
@@ -77,7 +81,7 @@ collection = db['test-collection']
 - [Error Handeling with Pymongo](https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html)
 - [API with MongoDB](https://rapidapi.com/blog/how-to-create-an-api-with-mongodb/)
 
-## Day 7: Create React App, Develop Home API, and Connect the Two
+## Step 8: Create React App, Develop Home API, and Connect the Two
 
 **Import Python CORS** to run front and backend on separate local servers
 
@@ -120,6 +124,8 @@ npm start
 ```
 
 - [React App](https://reactjs.org/docs/create-a-new-react-app.html)
+- [React Tutorial](https://www.youtube.com/watch?v=DLX62G4lc44)
+- [React Documentation](https://reactjs.org/tutorial/tutorial.html)  
 - [MDBReact](https://www.npmjs.com/package/mdbreact)
 - [Navbar and search](https://mdbootstrap.com/docs/react/navigation/navbar/)
 - [Cards](https://mdbootstrap.com/docs/react/components/cards/) use maps to iterate over the entire database and display
@@ -128,7 +134,7 @@ npm start
 - [Python MongoDB Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Python API with Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
-## Day 8: Develop Upload API and Connect to Frontend
+## Step 9: Develop Upload API and Connect to Frontend
 
 **Upload API**
 
@@ -155,7 +161,7 @@ npm start
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Delete document](https://www.w3schools.com/python/python_mongodb_delete.asp)
 
-## Day 9: Develop SearchPage API and Connect to Frontend
+## Step 10: Develop Search API and Connect to Frontend
 
 **SearchPage API**
 
@@ -179,11 +185,19 @@ this.setState({content: new_data, receivedResponse: true})
 
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
-## Day 10: Docker and Kubernetes
+## Step 11: Dockerize Flask Application
+- Create dockerfiles
+- Build images
 
-## Day 11: Unit Tests and Debugging
+- [](https://www.youtube.com/watch?v=prlixoDIfrc)
+- [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)  
+- [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
+- [Docker Documentation](https://docs.docker.com/get-started/)
 
-## Day 12: Deploy to Heroku and Netlify
+## Step 12: Orchestration using EC2, Beanstock, and Cloud Botch
 
-- Deploy to API Heroku
-- Deploy react app to Netlify
+
+## Step 13: Unit Tests and Debugging
+
+
+## Step 14: Deploy to AWS
