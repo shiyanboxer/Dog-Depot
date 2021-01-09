@@ -65,11 +65,11 @@ the [heroku link](https://image-repository-by-shiyan.herokuapp.com/).
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions
 - **Containers:** Docker
-- **Orchestration:** Kubernetes
+- **Orchestration:** EC2
 - **Testing:** CirclCI, Postman
 - **IDE:** Pycharm
-- **Deployment:** Heroku, Netlify
+- **Deployment:** AWS
 
 ## Troubleshooting
 
-If any problems arise please contact shiyanboxer7@gmail.com.
+Please contact shiyanboxer7@gmail.com if any problems arise. 
