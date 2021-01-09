@@ -1,7 +1,7 @@
 /*search bar*/
 .searchBar {
     float: left;
-    /*display: block;*/
+    display: block;
     background-color: #151515;
     display: flex;
     text-align: center;
@@ -11,6 +11,5 @@
 
 /*nav bar*/
 .navbar {
-    float: left;
     font-size: 25px;
 }

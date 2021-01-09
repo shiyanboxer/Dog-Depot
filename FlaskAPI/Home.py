@@ -1,6 +1,5 @@
 import json
 import flask
-import pymongo
 import Connection as con
 from flask_cors import CORS
 
