@@ -52,6 +52,7 @@ class NavBar extends React.Component {
 
                                     {/*When a new character is inputed in the search bar (onChange) then send functionCall using props.*/}
                                     <input className="form-control mr-sm-2"
+                                           size="40"
                                            onChange={this.props.functionCall}
                                            type="text" placeholder="Search by Author, Image Name, Tag"
                                            aria-label="Search"/>
