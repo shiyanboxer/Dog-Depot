@@ -12,7 +12,7 @@
 ## Step 3: Design Software Architecture
 
 - Create software architecture, UI diagram, API endpoints, Image metadata
-- See Software Architecture documentation  
+- See Software Architecture documentation
 
 ## Step 4: Design Software Architecture
 
@@ -125,7 +125,7 @@ npm start
 
 - [React App](https://reactjs.org/docs/create-a-new-react-app.html)
 - [React Tutorial](https://www.youtube.com/watch?v=DLX62G4lc44)
-- [React Documentation](https://reactjs.org/tutorial/tutorial.html)  
+- [React Documentation](https://reactjs.org/tutorial/tutorial.html)
 - [MDBReact](https://www.npmjs.com/package/mdbreact)
 - [Navbar and search](https://mdbootstrap.com/docs/react/navigation/navbar/)
 - [Cards](https://mdbootstrap.com/docs/react/components/cards/) use maps to iterate over the entire database and display
@@ -165,16 +165,9 @@ npm start
 
 **SearchPage API**
 
-- Find forms component in mdbreact
-- Route Search path by adding routing and connecting search .JS to .Py
-- Create CSS Search file, style search page, and connect to JS
-- Add functionality to Search button onClick to send user info to API, add id, and change type to text
-- Add Axios in Search JS to assign input into const variables for the onCilick id, response print success or error
-  message and displays found images on screen
-- In search.py using request get all the input from the user (data = json.loads(request.data)), connect to the database,
-  find photos that meet the users search, and return a result list of those images
-- Similar to home JS, in search JS add state, in axios function, change content to new_data, and add card container
-  component that renders when the “search” button is successfully completed.
+- Route Search path by adding routing to Home component to /search
+- Create CSS Search file, style search page, and connect to Home JS
+- Add functionality to Navigation bar "onChange" to send new character info to API and filter out home page
 
 ```  
 const new_data = response.data.result
@@ -186,18 +179,50 @@ this.setState({content: new_data, receivedResponse: true})
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
 ## Step 11: Dockerize Flask Application
+
+**Frontend**
+
 - Create dockerfiles
 - Build images
 
-- [](https://www.youtube.com/watch?v=prlixoDIfrc)
-- [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)  
+```
+cd directory
+docker run -d -p 80:80 docker/frontend 
+docker build -t frontend  .
+docker run -dp 3000:3000 frontend 
+```
+
+- Create a public repo in docker
+- Push to docker
+
+```
+docker login -u YOUR-USER-NAME 
+docker tag push getting-started shiyanboxer/getting-started
+docker push shiyanboxer/getting-started
+```  
+
+**Backend**
+
+- Create requirement.txt files
+- Create dockerfile
+- Build image
+- Run image
+
+```
+cd directory
+docker run -d -p 80:80 docker/frontend 
+docker build -t frontend  .
+docker run -dp 3000:3000 frontend 
+```
+
+![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.jpg)
+
+- [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)
 - [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
 - [Docker Documentation](https://docs.docker.com/get-started/)
 
 ## Step 12: Orchestration using EC2, Beanstock, and Cloud Botch
 
-
 ## Step 13: Unit Tests and Debugging
-
 
 ## Step 14: Deploy to AWS
