@@ -14,6 +14,7 @@ import {
     MDBDropdownItem
 } from "mdbreact";
 import "../CSS/Navbar.css"
+import "../CSS/App.css"
 
 class NavBar extends React.Component {
     state = {
@@ -24,7 +25,6 @@ class NavBar extends React.Component {
         this.setState({isOpen: !this.state.isOpen}
         );
     }
-
 
     render() {
         return (
@@ -42,21 +42,24 @@ class NavBar extends React.Component {
                         <MDBNavItem>
                             <MDBNavLink to="/upload">Upload</MDBNavLink>
                         </MDBNavItem>
+                    </MDBNavbarNav>
+
+                    {/*Search bar*/}
+                    <MDBNavbarNav right>
                         <MDBNavItem>
-                            <MDBNavLink to="/search">Search</MDBNavLink>
+                            <MDBFormInline waves>
+                                <div className="md-form my-0">
+
+                                    {/*When a new character is inputed in the search bar (onChange) then send functionCall using props.*/}
+                                    <input className="form-control mr-sm-2"
+                                           size="40"
+                                           onChange={this.props.functionCall}
+                                           type="text" placeholder="Search by Author, Image Name, Tag"
+                                           aria-label="Search"/>
+                                </div>
+                            </MDBFormInline>
                         </MDBNavItem>
                     </MDBNavbarNav>
-                    {/*Search bar*/}
-                      <MDBNavbarNav right>
-                        <MDBNavItem>
-                          <MDBFormInline waves>
-                            <div className="md-form my-0">
-                              <input className="form-control mr-sm-2" onChange={this.props.functionCall} type="text" placeholder="Search" aria-label="Search" />
-                            </div>
-                          </MDBFormInline>
-                        </MDBNavItem>
-                      </MDBNavbarNav>
-
                 </MDBCollapse>
             </MDBNavbar>
         )
