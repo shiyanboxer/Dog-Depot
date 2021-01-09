@@ -1,2 +1,5 @@
-# AWS passwords
+# Environment
 .env
+
+# AWS passwords
+env.py
