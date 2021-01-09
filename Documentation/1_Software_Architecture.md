@@ -16,40 +16,49 @@
 
 ### Upload
 
-- **GET:** https://image-repository-by-shiyan.herokuapp.com/upload/
+- **METHOD:** GET
+- **ROUTE:** "/upload"
+- **URL** http://127.0.0.1:5003/
 - **FUNCTION:** Upload
 - **DESCRIPTION:** Upload a single image to the database
 - **EXAMPLE RESPONSE:**
 
 ```
 {
-    "hello world"
+    "isError": False, 
+    "successMessage": "File uploaded successfully"
 }
 ```
 
-### SearchPage
+### Search
 
-- **GET:** https://image-repository-by-shiyan.herokuapp.com/upload/
-- **FUNCTION:** SearchPage
+- **METHOD:** POST
+- **ROUTE:** "/search"
+- **URL** http://127.0.0.1:5002/
+- **FUNCTION:** Search
 - **DESCRIPTION:** Using the search bar, find images based on id, author, image name, and tag, url
 - **EXAMPLE RESPONSE:**
 
 ```
 {
-    "hello world"
+    "isError": False,
+    "result": result
 }
 ```
 
 ### Home
 
-- **GET:** https://image-repository-by-shiyan.herokuapp.com/upload/
+- **METHOD:** GET
+- **ROUTE:** "/"
+- **URL** http://127.0.0.1:5001/  
 - **FUNCTION:** Home
 - **DESCRIPTION:** Render all images in database on the home page
 - **EXAMPLE RESPONSE:**
 
 ```
 {
-    "hello world"
+    "isError": False,
+    "result": result
 }
 ```
 

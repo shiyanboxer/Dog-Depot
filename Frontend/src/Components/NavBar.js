@@ -28,12 +28,11 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            // background color of nav bar
-            <MDBNavbar color="black" expand="lg">
+            <MDBNavbar expand="md">
                 <MDBNavbarBrand>
                     <strong className="white-text">Image Repository of Dogs</strong>
                 </MDBNavbarBrand>
-                <MDBNavbarToggler className="toggle" onClick={this.toggleCollapse}/>
+                <MDBNavbarToggler onClick={this.toggleCollapse}/>
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
                     <MDBNavbarNav left>
                         <MDBNavItem active>

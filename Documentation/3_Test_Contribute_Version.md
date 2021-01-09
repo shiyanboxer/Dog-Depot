@@ -13,9 +13,3 @@
 
 ## Versioning
 As of January 17th, 2021, there is only 1 version of the API available for use.
-
-### Version 1
-**Endpoints**
-- POST: Home https://
-- POST: Search https://
-- GET Upload https://
