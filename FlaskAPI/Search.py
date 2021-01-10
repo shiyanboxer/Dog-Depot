@@ -1,43 +1,55 @@
 import json
 import flask
-import Connection as con
+import Connection as connection
 from flask_cors import CORS
 from flask import request
 
+# https://www.w3schools.com/python/python_mongodb_find.asp
+# https://www.w3schools.com/python/python_mongodb_find.asp
+
 app = flask.Flask(__name__)
-cors = CORS(app)  # seperates client and server local host
+# Separates client and server local host
+cors = CORS(app)
 
 app.config["DEBUG"] = True
 
 
-# https://www.w3schools.com/python/python_mongodb_find.asp
-
 @app.route('/search', methods=['POST'])
 def search():
     """
-    SearchPage images from database on home screen
-    :return: images
+    Search for images from database on home screen by filtering by author, tag, and image name
+    :return: If no error, return a result (list of dictionaries with image content) and set isError to false, if there is an error, return isError is True and an error message
     """
-    # https://www.w3schools.com/python/python_mongodb_find.asp
 
-    # Get data from frontend and assign to variables
-    data = json.loads(request.data)  # this is a dictionary with the users input
+    # Load request by frontend and assign it to "data" variable
+    data = json.loads(request.data)
+
+    # Extract "search_text", lower() so no errors occur with searches, and set to "search_text" variable
     search_text = data["search_text"].lower()
 
-    # Connect to the database
+    # Almost exactly the same as Home.py but this time, filter images by only returning images that fit search
     try:
-        images = con.connect_db()
-        if isinstance(images, dict):
-            return images  # if there is an error connection to DB, return error message in Connection.py
+        # Connect to the database
+        collection = connection.connect_db()
 
-        # Find all images in database that satisfy search criteria
-        cursor = images.find({})
-        # Create an array "result" that will contain all entries in database that satisfy search criteria
+        # Using the find method we get all elements in the collection
+        # The "cursor" variable is a pymongo.cursor.Cursor object
+        cursor = collection.find({})
+
         result = []
+
+        # Iterate over the object "cursor" and add values for URL, ImageName, Author, and Tag to "each_list" if search_text is in (tag, or, author, or image) values
         for i in cursor:
-            if  search_text in i["Tag"].lower() or search_text in i["Author"].lower() or search_text in i["ImageName"].lower():
-                each_list = {"URL": i["URL"], "ImageName": i["ImageName"], "Author": i["Author"], "Tag": i["Tag"]}
-                result.append(each_list)  # Display the images in result on screen
+            if search_text in i["Tag"].lower() or search_text in i["Author"].lower() or search_text in i["ImageName"].lower():
+                each_list = {
+                    "URL": i["URL"],
+                    "ImageName": i["ImageName"],
+                    "Author": i["Author"],
+                    "Tag": i["Tag"]
+                }
+                # Result is a list of dictionaries with metadata about only image that match search_text in the database
+                result.append(each_list)
+
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
     return json.dumps({"isError": False, "result": result})

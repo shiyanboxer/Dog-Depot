@@ -1,22 +1,31 @@
 import pymongo
+import env as env
 
+
+# https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html
+# https://pymongo.readthedocs.io/en/stable/tutorial.html
 
 def connect_db():
     """
-    Connects Mongo DB cluster database so it can be accessed by APIS
-    :return: if there is an error, return an error message and isError True and  if no error, return "images" (our MongoDB collection)
+    Connects Mongo DB database "image" collection so it can be accessed by our APIS
+    :return: If there is an error, return an error message and set isError True and  if no error, return "collection" (our MongoDB collection)
     """
-    # https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html
-    # https://pymongo.readthedocs.io/en/stable/tutorial.html
-
     try:
-        # Mmking a connection with MongoClient¶
-        client = pymongo.MongoClient("mongodb+srv://shiyanboxer:NewPass@cluster0.qd7ht.mongodb.net/test")
-        # get instance of the database
+        # MongoDB route where collection is stored
+        route = "mongodb+srv://shiyanboxer:" + env.MongoPass + "@cluster0.qd7ht.mongodb.net/test"
+
+        # Make a Connection with MongoClient. Create a MongoClient to the running mongod instance.
+        client = pymongo.MongoClient(route)
+
+        # Get a single instance of MongoDB database (name of client)
         db = client["ImageRepository"]
-        # getting a collection (group of documents stored in MongoDB)
-        images = db["images"]
+
+        # Get a collection (group of documents stored in MongoDB, our MonogDB collection is called "images")
+        collection = db["images"]
+
+    # If connecting to the database fails, then return an error message and set isError = True
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
 
-    return images
+    # If connection succeed, return our collection (name "images" in MongoDB)
+    return collection

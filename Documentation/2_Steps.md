@@ -100,24 +100,23 @@ import 'mdbreact/dist/css/mdb.css';
 
 **Browser Router**
 
-- Install dnspython
-- Create routes.js
+1. Install dnspython
+2. Create routes.js and route paths with components
 
 **Home API (Home.py and Home.js)**
 
-- Iterate over the elements in the database and display them in React Cards on the homescreen
-- Render images only once when the home page is loaded
+1. Iterate over the elements in the database and display them in React Cards on the homescreen using maps
+2. Render images only once when the home page is loaded
 
 **Test API using React App**
 
-- Run flask api on local server
+1. Run flask api on local server
+2. Run react on seperate local server. If imagese load on the home page, then success!
 
 ```
 cd FlaskAPI
 python home.py
 ```
-
-- Run react on seperate local server. If imagese load on the home page, then success!
 
 ```
 npm start
@@ -165,20 +164,20 @@ npm start
 
 **SearchPage API**
 
-- Route Search path by adding routing to Home component to /search
-- Create CSS Search file, style search page, and connect to Home JS
-- Add functionality to Navigation bar "onChange" to send new character info to API and filter out home page
-
-```  
-const new_data = response.data.result
-this.setState({content: new_data, receivedResponse: true})
-```
+1. Route Search path by adding routing to Home component to /search
+2. Create CSS Search file, style search page, and connect to Home JS
+3. Home is the parent of navbar component
+4. In navbar.js create onChange function uses props to send function to Home.js onChange={this.props.functionCall}
+5. Create handleSearchRequest in Home.js that takes in the input from navbar and renders filtered database images on
+   screen
+6. In Search.py, connect to database, store all elements in "result", get request from frontend store in "search_text"
+   and filter using if search_text in i["Tag"]
 
 **Test API using Postman and Search page**
 
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
-## Step 11: Dockerize Flask Application
+## Step 11: Dockerize Flask Applications
 
 **Frontend**
 

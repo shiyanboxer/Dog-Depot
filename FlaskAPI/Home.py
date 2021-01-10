@@ -1,10 +1,16 @@
 import json
 import flask
-import Connection as con
+import Connection as connect
 from flask_cors import CORS
 
+# https://www.w3schools.com/python/python_mongodb_find.asp
+# https://docs.mongodb.com/manual/reference/method/db.collection.find/
+
+# TODO: error handling for collection = connect.connect_db()
+
 app = flask.Flask(__name__)
-cors = CORS(app)  # seperates client and server local host
+# Separates client and server local host
+cors = CORS(app)
 
 app.config["DEBUG"] = True
 
@@ -12,20 +18,31 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['GET'])
 def home():
     """
-    Load images from database on home screen
-    :return: images
+    Connects to the databse and load images on home screen
+    :return: If no error, return a result (list of dictionaries with image content) and set isError to false, if there is an error, return isError is True and an error message
     """
-    # https://www.w3schools.com/python/python_mongodb_find.asp
     try:
-        images = con.connect_db()
-        if isinstance(images, dict):
-            return images  # if error
+        # Connect to the database using Connection.py
+        collection = connect.connect_db()
 
         result = []
-        cursor = images.find({})
+
+        # Using the find method we get all elements in the collection
+        # The "cursor" variable is a pymongo.cursor.Cursor object
+        cursor = collection.find({})
+
+        # Iterate over the object "cursor" and add values for URL, ImageName, Author, and Tag to "each_list"
         for i in cursor:
-            each_list = {"URL": i["URL"], "ImageName": i["ImageName"], "Author": i["Author"], "Tag": i["Tag"]}
+            each_list = {
+                "URL": i["URL"],
+                "ImageName": i["ImageName"],
+                "Author": i["Author"],
+                "Tag": i["Tag"]
+            }
+
+            # Result is a list of dictionaries with metadata about each image in the database
             result.append(each_list)
+
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}
     return json.dumps({"isError": False, "result": result})

@@ -2,6 +2,8 @@ import React from "react"
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol} from 'mdbreact';
 import "../CSS/Card.css"
 
+// https://mdbootstrap.com/docs/react/components/cards/
+
 class Card extends React.Component {
     render() {
         return (

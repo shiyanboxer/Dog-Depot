@@ -42,7 +42,10 @@
 ```
 {
     "isError": False,
-    "result": result
+    "result": [{"URL": "https://imagerepositorybyshiyanboxer.s3.ca-central-1.amazonaws.com/alvan-nee-T-0EW-SEbsE-unsplash.jpg",
+                "ImageName": "Running in the sun",
+                "Author": "Shiyan Boxer",
+                "Tag": "small,running "}]
 }
 ```
 
@@ -58,7 +61,10 @@
 ```
 {
     "isError": False,
-    "result": result
+    "result": [{"URL": "https://imagerepositorybyshiyanboxer.s3.ca-central-1.amazonaws.com/alvan-nee-T-0EW-SEbsE-unsplash.jpg",
+                "ImageName": "Running in the sun",
+                "Author": "Shiyan Boxer",
+                "Tag": "small,running "}]
 }
 ```
 

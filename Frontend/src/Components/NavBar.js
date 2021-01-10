@@ -16,7 +16,10 @@ import {
 import "../CSS/Navbar.css"
 import "../CSS/App.css"
 
+// https://reactjs.org/docs/faq-functions.html
+
 class NavBar extends React.Component {
+    // State for toggle button when screen gets too small
     state = {
         isOpen: false
     };
@@ -49,7 +52,7 @@ class NavBar extends React.Component {
                             <MDBFormInline waves>
                                 <div className="md-form my-0">
 
-                                    {/*When a new character is inputed in the search bar (onChange) then send functionCall using props.*/}
+                                    {/*When a new character is inputted in the search bar (onChange) then send functionCall using props.*/}
                                     <input className="form-control mr-sm-2"
                                            size="40"
                                            onChange={this.props.functionCall}

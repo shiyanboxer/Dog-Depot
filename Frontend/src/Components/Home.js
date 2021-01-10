@@ -5,14 +5,14 @@ import Card from "./Card";
 import "../CSS/App.css"
 import "../CSS/Navbar.css";
 
-class Home extends React.Component {
-    // Only is called when Home component is mounted (once)
 
+class Home extends React.Component {
+    // Use state to see when content changes
     state = {
         content: [],
         receivedResponse: false
     }
-
+    // Used by nav bar that calls Search API each time a the search changes
     handleSearchRequest(e) {
         const search_text = e.target.value
         axios({
@@ -28,9 +28,9 @@ class Home extends React.Component {
                 alert(response.data.errorMessage)
             }
         })
-
     }
 
+    // Only is called when Home component mounted (only once)
     componentDidMount() {
         axios({
             method: "GET",
