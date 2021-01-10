@@ -1,6 +1,6 @@
 import json
 import flask
-import Connection as connect
+import Connection as con
 from flask_cors import CORS
 
 # https://www.w3schools.com/python/python_mongodb_find.asp
@@ -15,6 +15,10 @@ cors = CORS(app)
 app.config["DEBUG"] = True
 
 
+@app.route("/home",methods=["GET"])
+def get_home():
+    return "home"
+
 @app.route('/', methods=['GET'])
 def home():
     """
@@ -22,14 +26,15 @@ def home():
     :return: If no error, return a result (list of dictionaries with image content) and set isError to false, if there is an error, return isError is True and an error message
     """
     try:
-        # Connect to the database using Connection.py
-        collection = connect.connect_db()
+        # Connect to the database by getting a request from the Connect API
+
+        image = con.connect_db()
 
         result = []
 
         # Using the find method we get all elements in the collection
         # The "cursor" variable is a pymongo.cursor.Cursor object
-        cursor = collection.find({})
+        cursor = image.find({})
 
         # Iterate over the object "cursor" and add values for URL, ImageName, Author, and Tag to "each_list"
         for i in cursor:
@@ -48,4 +53,4 @@ def home():
     return json.dumps({"isError": False, "result": result})
 
 
-app.run(port=5001)
+app.run(port=5001, host="0.0.0.0")

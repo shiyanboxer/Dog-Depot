@@ -14,7 +14,7 @@ class Upload extends React.Component {
 
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5003/upload",
+            url: "http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5003/upload",
             // Return "data", a dictionary of the users inputs
             data: {
                 "Author": in_author,

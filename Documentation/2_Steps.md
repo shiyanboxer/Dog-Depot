@@ -177,24 +177,24 @@ npm start
 
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
-## Step 11: Dockerize Flask Applications
+## Step 11: Create EC2 Instance, Dockerize Flask Applications
+**EC2** 
+1. Create EC2 Instance and download public key
+2. Download putty and putty gen
+3. Connect to instance IPv4 DNS and provide private key in SHH using putty gen
+4. [Install Ubutunu in Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
+5. Make a directory for each microservice
+6. Copy API, requirement.txt files, and Dockerfile files to EC2
 
-**Frontend**
-
-- Create dockerfiles
-- Build images
+**Docker**
+1. Freeze requirements
+2. Create dockerfile
+3. Create build image
+4. Run docker image
+5. Connect EC2 instance docker server to frontend and test
 
 ```
 cd directory
-docker run -d -p 80:80 docker/frontend 
-docker build -t frontend  .
-docker run -dp 3000:3000 frontend 
-```
-
-- Create a public repo in docker
-- Push to docker
-
-```
 docker login -u YOUR-USER-NAME 
 docker tag push getting-started shiyanboxer/getting-started
 docker push shiyanboxer/getting-started
@@ -221,6 +221,7 @@ docker run -dp 3000:3000 frontend
 - [Docker Documentation](https://docs.docker.com/get-started/)
 
 ## Step 12: Orchestration using EC2, Beanstock, and Cloud Botch
+
 
 ## Step 13: Unit Tests and Debugging
 

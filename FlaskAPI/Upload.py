@@ -70,4 +70,4 @@ def upload():
     return json.dumps({"isError": False, "successMessage": "File uploaded successfully"})
 
 
-app.run(port=5003)
+app.run(port=5003, host="0.0.0.0")
