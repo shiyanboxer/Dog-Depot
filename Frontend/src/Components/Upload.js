@@ -4,6 +4,7 @@ import axios from "axios";
 
 class Upload extends React.Component {
     uploader() {
+        // Get image parameters by ID and assign variables
         const in_author = document.getElementById("Author").value
         const in_imageName = document.getElementById("ImageName").value
         const in_tag = document.getElementById("Tag").value
@@ -14,6 +15,7 @@ class Upload extends React.Component {
         axios({
             method: "POST",
             url: "http://127.0.0.1:5003/upload",
+            // Return "data", a dictionary of the users inputs
             data: {
                 "Author": in_author,
                 "ImageName": in_imageName,
@@ -22,15 +24,16 @@ class Upload extends React.Component {
                 "FileName": in_fileName.name
             }
         }).then((response) => {
+            // If the is request was successful, display a success message
             if (response.data.isError === false) {
                 alert(response.data.successMessage)
-
             } else {
                 alert(response.data.errorMessage)
             }
         })
     }
 
+    // Pass image author, image name, and tag by ID
     render() {
         return (
             <MDBContainer className="upload">
@@ -56,6 +59,7 @@ class Upload extends React.Component {
                             </label>
                             <input type="file" id="FileName" className="form-control"/>
                             <div className="text-center mt-4">
+                                {/*When button is clicked (onClick) call uploader function*/}
                                 <MDBBtn gradient="aqua" rounded size="md" onClick={this.uploader}>Upload</MDBBtn>
                             </div>
                         </form>
