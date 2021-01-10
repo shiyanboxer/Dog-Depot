@@ -60,12 +60,12 @@ the [heroku link](https://image-repository-by-shiyan.herokuapp.com/).
 
 ## Technologies
 
-- **API:** Python, Flask, dnspython, pymongo, CORS, request, boto3
+- **API:** Python, Flask, pymongo, CORS, request, boto3
 - **Database:** MongoDB
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions
 - **Containers:** Docker
-- **Orchestration:** EC2
+- **Orchestration:** EC2, Beanstalk
 - **Testing:** CirclCI, Postman
 - **IDE:** Pycharm
 - **Deployment:** AWS
