@@ -65,7 +65,7 @@ the [heroku link](https://image-repository-by-shiyan.herokuapp.com/).
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions
 - **Containers:** Docker
-- **Orchestration:** EC2, Beanstalk
+- **Orchestration:** EC2, Beanstalk, Putty, PuttyGen
 - **Testing:** CirclCI, Postman
 - **IDE:** Pycharm
 - **Deployment:** AWS
