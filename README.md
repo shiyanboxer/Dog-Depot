@@ -1,11 +1,5 @@
 # Image Repository
 
-## TODO
-
-- Demo Video
-- Quickstart
-
-
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
 - **[Website Link](https://dog-image-repository.netlify.app/)**
@@ -22,7 +16,7 @@ This image repository stores jpg photos of dogs in a MongoDB database using AWS 
 that allow you to interact with the backend including:
 
 1. **Upload** - upload a single image to the database
-2. **SearchPage** - using the search bar, find images based on id, author, image name, and tag, url
+2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
 These endpoints can be accessed via the [website](https://dog-image-repository.netlify.app/) or
