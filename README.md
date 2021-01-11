@@ -19,9 +19,6 @@ that allow you to interact with the backend including:
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
-These endpoints can be accessed via the [website](https://dog-image-repository.netlify.app/) or
-the [heroku link](https://image-repository-by-shiyan.herokuapp.com/).
-
 ## Demo Video
 
 ## Quickstart
