@@ -33,7 +33,7 @@ class NavBar extends React.Component {
         return (
             <MDBNavbar expand="md">
                 <MDBNavbarBrand>
-                    <strong className="white-text">Image Repository of Dogs</strong>
+                    <strong className="white-text">Dog Depot</strong>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={this.toggleCollapse}/>
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
