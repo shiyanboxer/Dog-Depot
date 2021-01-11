@@ -214,7 +214,7 @@ docker build -t frontend  .
 docker run -dp 3000:3000 frontend 
 ```
 
-![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.png)
+![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.jpg)
 
 - [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)
 - [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
