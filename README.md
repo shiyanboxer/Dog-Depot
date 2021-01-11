@@ -1,4 +1,4 @@
-# Image Repository
+# Dog Depot
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
