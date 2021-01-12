@@ -23,10 +23,17 @@ class Upload extends React.Component{
 
         axios({
             method:"POST",
-            url:"http://127.0.0.1:5000/up?imagename="+imagename+"&author="+author+"&tag="+tag,
+            url:"http://ec2-99-79-58-26.ca-central-1.compute.amazonaws.com:5003/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             data: data
             }).then((resp)=>{
-                alert(resp.data)
+                const data = resp.data
+                if(data.isError){
+                    alert(data.errorMessage)
+                }
+                else{
+                    alert(data.successMessage)
+                }
+
             })
 
       }
@@ -89,10 +96,8 @@ class Upload extends React.Component{
                 </MDBRow>
                 <MDBRow>
                     <MDBCol md="9">
-                    <DropzoneArea
-            onChange={this.handleChange.bind(this)}
-            />
-            <button onClick={this.handleClick.bind(this)} className="btn btn-primary">Upload</button>
+                    <DropzoneArea onChange={this.handleChange.bind(this)}/>
+                    <button onClick={this.handleClick.bind(this)} className="btn btn-primary">Upload</button>
                     </MDBCol>
                 </MDBRow>
 
