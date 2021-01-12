@@ -18,7 +18,8 @@ class Home extends React.Component {
         const search_text = e.target.value
         axios({
             method: "POST",
-            url: "http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5002/search",
+            // http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5002/search
+            url: "http://127.0.0.1:5002/search",
             // Return "data" a dictionary which contains a single key value search_text that is the content in the search bar
             data: {"search_text": search_text}
         }).then((response) => {
@@ -36,7 +37,8 @@ class Home extends React.Component {
     componentDidMount() {
         axios({
             method: "GET",
-            url: "http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5001/"
+            // http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5001/
+            url: "http://127.0.0.1:5001/"
         }).then((response) => {
             if (response.data.isError === false) {
                 const new_data = response.data.result

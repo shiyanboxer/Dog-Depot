@@ -1,73 +1,106 @@
 import React from "react"
-import {MDBContainer, MDBRow, MDBCol, MDBBtn} from 'mdbreact';
-import axios from "axios";
+import axios from "axios"
+import {DropzoneArea} from 'material-ui-dropzone'
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from 'mdbreact';
+var FormData = require('form-data');
 
-class Upload extends React.Component {
-    uploader() {
-        // Get image parameters by ID and assign variables
-        const in_author = document.getElementById("Author").value
-        const in_imageName = document.getElementById("ImageName").value
-        const in_tag = document.getElementById("Tag").value
-        const myFilePath = "C:\\Users\\shiya\\Documents\\UploadImg\\"
-        const in_fileName = document.getElementById("FileName").files[0]
-        const wholePath = myFilePath + in_fileName.name
+class Upload extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+          files: []
+        };
+      }
+
+      handleClick(e){
+        e.preventDefault()
+        const data = new FormData();
+        const imagename = document.getElementById("name").value
+        const author = document.getElementById("author").value
+        const tag = document.getElementById("tag").value
+        data.append('image', this.state.files[0]);
 
         axios({
-            method: "POST",
-            url: "http://ec2-99-79-31-246.ca-central-1.compute.amazonaws.com:5003/upload",
-            // Return "data", a dictionary of the users inputs
-            data: {
-                "Author": in_author,
-                "ImageName": in_imageName,
-                "Tag": in_tag,
-                "FilePath": wholePath,
-                "FileName": in_fileName.name
-            }
-        }).then((response) => {
-            // If the is request was successful, display a success message
-            if (response.data.isError === false) {
-                alert(response.data.successMessage)
-            } else {
-                alert(response.data.errorMessage)
-            }
-        })
-    }
+            method:"POST",
+            url:"http://127.0.0.1:5000/up?imagename="+imagename+"&author="+author+"&tag="+tag,
+            data: data
+            }).then((resp)=>{
+                alert(resp.data)
+            })
 
-    // Pass image author, image name, and tag by ID
-    render() {
+      }
+      handleChange(files){
+        this.setState({
+          files: files
+        });
+
+      }
+      render(){
         return (
-            <MDBContainer className="upload">
-                <MDBRow>
-                    <MDBCol md="12">
-                        <form>
-                            <label className="grey-text">
-                                Author
+        <div className="container">
+        <MDBContainer style={{"marginLeft":"25rem"}}>
+                 <MDBRow>
+                     <MDBCol md="9">
+                     <MDBCard>
+                         <MDBCardBody>
+                              <form>
+                             <p className="h4 text-center py-4">Upload a new Image</p>
+                             <label
+                            htmlFor="defaultFormCardNameEx"
+                            className="grey-text font-weight-light"
+                            >
+                            Image name
                             </label>
-                            <input type="text" id="Author" className="form-control"/>
+                            <input
+                            type="text"
+                            id="name"
+                            className="form-control"
+                            />
+
+                            <label
+                            htmlFor="defaultFormCardEmailEx"
+                            className="grey-text font-weight-light"
+                            >
+                            Author
+                            </label>
+                            <input
+                            type="text"
+                            id="author"
+                            className="form-control"
+                            />
+
+                            <label
+                            htmlFor="defaultFormCardEmailEx"
+                            className="grey-text font-weight-light"
+                            >
+                            Tag
+                            </label>
+                            <input
+                            type="text"
+                            id="tag"
+                            className="form-control"
+                            />
                             <br/>
-                            <label className="grey-text">
-                                Image Name
-                            </label>
-                            <input type="text" id="ImageName" className="form-control"/>
-                            <br/>
-                            <label className="grey-text">
-                                Tag
-                            </label>
-                            <input type="text" id="Tag" className="form-control"/>
-                            <br/>
-                            <label className="grey-text">
-                            </label>
-                            <input type="file" id="FileName" className="form-control"/>
-                            <div className="text-center mt-4">
-                                {/*When button is clicked (onClick) call uploader function*/}
-                                <MDBBtn gradient="aqua" rounded size="md" onClick={this.uploader}>Upload</MDBBtn>
-                            </div>
                         </form>
+                        </MDBCardBody>
+                    </MDBCard>
                     </MDBCol>
                 </MDBRow>
+                <MDBRow>
+                    <MDBCol md="9">
+                    <DropzoneArea
+            onChange={this.handleChange.bind(this)}
+            />
+            <button onClick={this.handleClick.bind(this)} className="btn btn-primary">Upload</button>
+                    </MDBCol>
+                </MDBRow>
+
             </MDBContainer>
-        );
-    }
+
+            </div>
+        )
+      }
 }
 
 export default Upload;
