@@ -1,6 +1,6 @@
 import json
 import flask
-import Connection as con
+import Connection as connection
 from flask_cors import CORS
 
 # https://www.w3schools.com/python/python_mongodb_find.asp
@@ -15,9 +15,9 @@ cors = CORS(app)
 app.config["DEBUG"] = True
 
 
-@app.route("/home",methods=["GET"])
-def get_home():
-    return "home"
+# @app.route("/home",methods=["GET"])
+# def get_home():
+#     return "home"
 
 @app.route('/', methods=['GET'])
 def home():
@@ -27,8 +27,7 @@ def home():
     """
     try:
         # Connect to the database by getting a request from the Connect API
-
-        image = con.connect_db()
+        image = connection.connect_db()
 
         result = []
 
@@ -38,7 +37,7 @@ def home():
 
         # Iterate over the object "cursor" and add values for URL, ImageName, Author, and Tag to "each_list"
         for i in cursor:
-            each_list = {
+            eachImage = {
                 "URL": i["URL"],
                 "ImageName": i["ImageName"],
                 "Author": i["Author"],
@@ -46,7 +45,7 @@ def home():
             }
 
             # Result is a list of dictionaries with metadata about each image in the database
-            result.append(each_list)
+            result.append(eachImage)
 
     except Exception as e:
         return {"isError": True, "errorMessage": "An Exception has occured"}

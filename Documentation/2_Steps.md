@@ -110,7 +110,6 @@ import 'mdbreact/dist/css/mdb.css';
 
 **Test API using React App**
 
-1. Run flask api on local server
 2. Run react on seperate local server. If imagese load on the home page, then success!
 
 ```
@@ -121,7 +120,7 @@ python home.py
 ```
 npm start
 ```
-
+- [Testing](https://realpython.com/python-testing/#automated-vs-manual-testing)
 - [React App](https://reactjs.org/docs/create-a-new-react-app.html)
 - [React Tutorial](https://www.youtube.com/watch?v=DLX62G4lc44)
 - [React Documentation](https://reactjs.org/tutorial/tutorial.html)
@@ -214,10 +213,11 @@ docker build -t frontend  .
 docker run -dp 3000:3000 frontend 
 ```
 
-![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.jpg)
-
+  ![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.jpg)
+- [Docker Container on EC2](https://www.youtube.com/watch?v=awFLzy0XwXo)
 - [Dockerize your Flask Application](https://runnable.com/docker/python/dockerize-your-flask-application)
 - [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
 - [Docker Documentation](https://docs.docker.com/get-started/)
 
 ## Step 12: Orchestration using EC2, Beanstock, and Deploy
+

@@ -1,8 +1,9 @@
 import pymongo
 import env as env
+
+
 # https://pymongo.readthedocs.io/en/stable/api/pymongo/errors.html
 # https://pymongo.readthedocs.io/en/stable/tutorial.html
-
 
 
 def connect_db():

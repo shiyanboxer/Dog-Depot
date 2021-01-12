@@ -21,6 +21,11 @@ that allow you to interact with the backend including:
 
 ## Demo Video
 
+### Part 1: Running Locally
+
+### Part 2: Deployed
+
+
 ## Quickstart
 
 ### Requirements
