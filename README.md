@@ -2,9 +2,12 @@
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
-- **[Website Link](https://dog-image-repository.netlify.app/)**
-- **[API Link](https://image-repository-by-shiyan.herokuapp.com/)**
-- **[Docker Repository](https://hub.docker.com/r/shiyanboxer/imagerepository)**
+- **[Website Link](http://ec2-15-223-5-20.ca-central-1.compute.amazonaws.com:3000/)**
+- **[Docker Hub APIs Link](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
+- **[Home API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/)**
+- **[Search API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search)**
+- **[Upload API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload)**
+
 - **[Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
     - **[Software Architecture](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/1_Software_Architecture.md)**
     - **[Steps](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/2_Steps.md)**
@@ -20,9 +23,7 @@ that allow you to interact with the backend including:
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
-The project was deployed 2 ways. 
-1. Using Docker which can be accessed in the **[Docker Repository](https://hub.docker.com/r/shiyanboxer/imagerepository)**
-2. Using Heroku for the frontend which can be accessed using the **[Website Link](https://dog-image-repository.netlify.app/)** and using Heroku which can be accssed using the **[API Link](https://image-repository-by-shiyan.herokuapp.com/)**
+The project was deployed on Beanstalk which is sponing 1 instance of EC2
 
 ## Demo Video
 
