@@ -23,7 +23,7 @@ that allow you to interact with the backend including:
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
-The project was deployed on Beanstalk which is sponing 1 instance of EC2
+The project was deployed on Beanstalk which is running 1 instance of EC2 that is running the Dockerized APIs.
 
 ## Demo Video
 
