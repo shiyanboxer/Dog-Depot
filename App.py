@@ -43,6 +43,9 @@ def connect_db():
     # If connection succeed, return our collection (name "images" in MongoDB)
     return collection
 
+@app.route('/test', methods=['GET'])
+def test():
+    return json.dumps({"hello": "hello world"})
 
 @app.route('/', methods=['GET'])
 def home():
