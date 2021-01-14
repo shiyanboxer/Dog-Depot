@@ -177,6 +177,7 @@ npm start
 - [MDBReact Forms](https://mdbootstrap.com/docs/react/forms/basic/)
 
 ## Step 11: Create EC2 Instance, Dockerize Flask Applications
+
 **EC2** 
 1. Create EC2 Instance and download public key
 2. Download putty and putty gen
@@ -191,27 +192,7 @@ npm start
 3. Create build image
 4. Run docker image
 5. Connect EC2 instance docker server to frontend and test
-
-```
-cd directory
-docker login -u YOUR-USER-NAME 
-docker tag push getting-started shiyanboxer/getting-started
-docker push shiyanboxer/getting-started
-```  
-
-**Backend**
-
-- Create requirement.txt files
-- Create dockerfile
-- Build image
-- Run image
-
-```
-cd directory
-docker run -d -p 80:80 docker/frontend 
-docker build -t frontend  .
-docker run -dp 3000:3000 frontend 
-```
+6. Push to docker hub
 
   ![Docker](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Docker.jpg)
 - [Docker Container on EC2](https://www.youtube.com/watch?v=awFLzy0XwXo)
@@ -219,5 +200,7 @@ docker run -dp 3000:3000 frontend
 - [Docker Tutorial](https://www.youtube.com/watch?v=3c-iBn73dDE&t=627s)
 - [Docker Documentation](https://docs.docker.com/get-started/)
 
-## Step 12: Orchestration using EC2, Beanstock, and Deploy
+## Step 12: Deploy to Beanstock
 
+1. Create an environment and application in Beanstalk
+2. Create Dockerrun.aws file and upload to Beanstalk

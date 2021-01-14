@@ -2,7 +2,8 @@
 
 ## Testing
 - **Postman** was used to test the APIs ensuring the correct response and debugging any errors.
-- **CirclCI** was used to run all tests before a branch was merged to master.
+- **unittest** Checking status code, content type, and content for each API.
+- **Google Inspect Tool** for verifying frontend requests and responses have been processed.
 
 ## Contributing
 1. Submit an issue (eg. feature request or bug)

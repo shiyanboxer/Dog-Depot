@@ -1,0 +1,43 @@
+{
+    "AWSEBDockerrunVersion":"2",
+    "containerDefinitions": [
+		{
+            "essential": true,
+            "image": "shiyanboxer/imagerepository:home",
+            "name": "home",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 5001,
+                    "hostPort": 5001
+                }
+            ]
+        },
+		{
+            "essential": true,
+            "image": "shiyanboxer/imagerepository:search",
+            "name": "search",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 5002,
+                    "hostPort": 5002
+                }
+            ]
+        },
+		{
+            "essential": true,
+            "image": "shiyanboxer/imagerepository:upload",
+            "name": "upload",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "containerPort": 5003,
+                    "hostPort": 5003
+                }
+            ]
+        }
+    ],
+    "family": "",
+    "volumes": []
+}

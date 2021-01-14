@@ -18,7 +18,7 @@
 
 - **METHOD:** GET
 - **ROUTE:** "/upload"
-- **URL** http://127.0.0.1:5003/
+- **URL** http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload
 - **FUNCTION:** Upload
 - **DESCRIPTION:** Upload a single image to the database
 - **EXAMPLE RESPONSE:**
@@ -34,7 +34,7 @@
 
 - **METHOD:** POST
 - **ROUTE:** "/search"
-- **URL** http://127.0.0.1:5002/
+- **URL** http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search
 - **FUNCTION:** Search
 - **DESCRIPTION:** Using the search bar, find images based on id, author, image name, and tag, url
 - **EXAMPLE RESPONSE:**
@@ -53,7 +53,7 @@
 
 - **METHOD:** GET
 - **ROUTE:** "/"
-- **URL** http://127.0.0.1:5001/  
+- **URL** http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/
 - **FUNCTION:** Home
 - **DESCRIPTION:** Render all images in database on the home page
 - **EXAMPLE RESPONSE:**

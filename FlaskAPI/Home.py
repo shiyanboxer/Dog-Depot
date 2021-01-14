@@ -15,10 +15,6 @@ cors = CORS(app)
 app.config["DEBUG"] = True
 
 
-# @app.route("/home",methods=["GET"])
-# def get_home():
-#     return "home"
-
 @app.route('/', methods=['GET'])
 def home():
     """

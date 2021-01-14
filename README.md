@@ -4,10 +4,9 @@
 - **Last Updated: January 17th, 2020**
 - **[Website Link](http://ec2-15-223-5-20.ca-central-1.compute.amazonaws.com:3000/)**
 - **[Docker Hub APIs Link](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
-- **[Home API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/)**
-- **[Search API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search)**
-- **[Upload API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload)**
-
+    - **[Home API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/)**
+    - **[Search API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search)**
+    - **[Upload API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload)**
 - **[Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
     - **[Software Architecture](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/1_Software_Architecture.md)**
     - **[Steps](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/2_Steps.md)**
@@ -23,12 +22,11 @@ that allow you to interact with the backend including:
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
-The project was deployed on Beanstalk which is running 1 instance of EC2 that is running the Dockerized APIs.
+The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs.
 
 ## Demo Video
 
-
-## Quickstart Docker 
+## Quickstart with Docker
 
 ### Requirements
 
@@ -36,25 +34,18 @@ The project was deployed on Beanstalk which is running 1 instance of EC2 that is
 - Python (version 3.7)
 - MongoDB (version 4.0.0)
 
-**Setting Up Server**
+**Pull and Run Images from Docker Hub**
 
-1. Build and link containers for MongoDB and Python app
-
-`docker-compose up --build -d`
-
-2. Seed the database with initial images
-
-`docker exec -it webAPI npm run seed`
-
-3. Browse using the local host link
-
-`localhost:3000/`!
+```
+docker pull shiyanboxer/imagerepository
+docker run -dp 3001:3001 home
+docker run -dp 3002:3002 search
+docker run -dp 3003:3003 upload
+```
 
 **Stopping Server**
 
-1. Type below command to stop Mongod DB containers and Python app
-
-`docker-compose stop`
+`docker stop`
 
 ## Technologies
 
@@ -70,4 +61,4 @@ The project was deployed on Beanstalk which is running 1 instance of EC2 that is
 
 ## Troubleshooting
 
-Please contact shiyanboxer7@gmail.com if any problems arise. 
+Please contact shiyanboxer7@gmail.com if any problems arise.
