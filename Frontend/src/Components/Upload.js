@@ -23,7 +23,7 @@ class Upload extends React.Component{
 
         axios({
             method:"POST",
-            url:"http://ec2-99-79-58-26.ca-central-1.compute.amazonaws.com:5003/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
+            url:"http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             data: data
             }).then((resp)=>{
                 const data = resp.data
