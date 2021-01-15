@@ -18,7 +18,7 @@ class Home extends React.Component {
         const search_text = e.target.value
         axios({
             method: "POST",
-            url: "http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search",
+            url: "https://dog-depot-by-shiyan-boxer.herokuapp.com/search",
             // Return "data" a dictionary which contains a single key value search_text that is the content in the search bar
             data: {"search_text": search_text}
         }).then((response) => {
@@ -36,7 +36,7 @@ class Home extends React.Component {
     componentDidMount() {
         axios({
             method: "GET",
-            url: "http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/"
+            url: "https://dog-depot-by-shiyan-boxer.herokuapp.com/"
         }).then((response) => {
             if (response.data.isError === false) {
                 const new_data = response.data.result

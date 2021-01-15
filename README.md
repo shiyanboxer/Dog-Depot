@@ -2,11 +2,11 @@
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
-- **[Website Link](http://ec2-15-223-5-20.ca-central-1.compute.amazonaws.com:3000/)**
+- **[Website Link](https://dog-depot.netlify.app/)**
 - **[Docker Hub APIs Link](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
-    - **[Home API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5001/)**
-    - **[Search API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5002/search)**
-    - **[Upload API](http://imagerepo-env.eba-f2rmmiak.ca-central-1.elasticbeanstalk.com:5003/upload)**
+    - **[Home API](https://dog-depot-by-shiyan-boxer.herokuapp.com/)**
+    - **[Search API](https://dog-depot-by-shiyan-boxer.herokuapp.com/search)**
+    - **[Upload API](https://dog-depot-by-shiyan-boxer.herokuapp.com/upload)**
 - **[Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
     - **[Software Architecture](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/1_Software_Architecture.md)**
     - **[Steps](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/2_Steps.md)**
