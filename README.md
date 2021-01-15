@@ -3,7 +3,7 @@
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
 - **[Website Link](https://dog-depot.netlify.app/)**
-- **[Docker Hub APIs Link](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
+- **[Docker Hub APIs Repo](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
     - **[Home API](https://dog-depot-by-shiyan-boxer.herokuapp.com/)**
     - **[Search API](https://dog-depot-by-shiyan-boxer.herokuapp.com/search)**
     - **[Upload API](https://dog-depot-by-shiyan-boxer.herokuapp.com/upload)**
@@ -24,7 +24,9 @@ that allow you to interact with the backend including:
 
 The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs.
 
-## Demo Video
+![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)
+
+**[Visit Demo](https://dog-depot.netlify.app/)**
 
 ## Quickstart with Docker
 
@@ -57,7 +59,7 @@ docker run -dp 3003:3003 upload
 - **Orchestration:** AWS EC2, Putty, PuttyGen
 - **Testing:** CirclCI, Postman
 - **IDE:** Pycharm
-- **Deployment:** AWS Beanstalk
+- **Deployment:** AWS Beanstalk, Heroku, Netlify
 
 ## Troubleshooting
 
