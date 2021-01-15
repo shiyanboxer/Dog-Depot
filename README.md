@@ -22,11 +22,10 @@ that allow you to interact with the backend including:
 2. **Search** - using the search bar, find images based on id, author, image name, and tag, url
 3. **Home** - render all images in database on the home page
 
-The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs.
+The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs. For the purpose
+of a **[Demo](https://dog-depot.netlify.app/)**, Heroku and Netlify were used to deploy the APIs and website.
 
 ![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)
-
-**[Visit Demo](https://dog-depot.netlify.app/)**
 
 ## Quickstart with Docker
 
