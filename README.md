@@ -56,7 +56,7 @@ docker run -dp 3003:3003 upload
 - **Frontend:** React, Javascript, MBDReact, Axions
 - **Containers:** Docker
 - **Orchestration:** AWS EC2, Putty, PuttyGen
-- **Testing:** CirclCI, Postman
+- **Testing:** unittest, Postman
 - **IDE:** Pycharm
 - **Deployment:** AWS Beanstalk, Heroku, Netlify
 
