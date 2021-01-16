@@ -2,6 +2,9 @@
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
+
+
+⭐ Please give the demo a moment to load
 - **[Website Link](https://dog-depot.netlify.app/)**
 - **[Docker Hub APIs Repo](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
     - **[Home API](https://dog-depot-by-shiyan-boxer.herokuapp.com/)**
