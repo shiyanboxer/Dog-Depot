@@ -55,10 +55,9 @@ docker run -dp 3003:3003 upload
 - **Storage:** AWS S3
 - **Frontend:** React, Javascript, MBDReact, Axions
 - **Containers:** Docker
-- **Orchestration:** AWS EC2, Putty, PuttyGen
 - **Testing:** unittest, Postman
 - **IDE:** Pycharm
-- **Deployment:** AWS Beanstalk, Heroku, Netlify
+- **Deployment:** AWS Beanstalk, AWS EC2, Putty, PuttyGen, Heroku, Netlify
 
 ## Troubleshooting
 
