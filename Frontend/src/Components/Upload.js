@@ -23,7 +23,7 @@ class Upload extends React.Component{
 
         axios({
             method:"POST",
-            url:"ttp://127.0.0.1:5000/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
+            url:"https://dog-depot-shiyan.herokuapp.com/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             // url:"https://dog-depot-shiyan.herokuapp.com/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             data: data
             }).then((resp)=>{
