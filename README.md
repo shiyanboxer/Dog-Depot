@@ -2,12 +2,12 @@
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: January 17th, 2020**
-- **[⭐ Website Link](https://dog-depot.netlify.app/)** (Please give the demo a moment to load)
-- **[⭐ Docker Hub APIs Repo](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
+- **[Website Link](https://dog-depot.netlify.app/)** (Please give the demo a moment to load)
+- **[Docker Hub APIs Repo](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
     - **[Home API](https://dog-depot-by-shiyan-boxer.herokuapp.com/)**
     - **[Search API](https://dog-depot-by-shiyan-boxer.herokuapp.com/search)**
     - **[Upload API](https://dog-depot-by-shiyan-boxer.herokuapp.com/upload)**
-- **[⭐ Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
+- **[Documentation](https://github.com/shiyanboxer/Image-Repository/tree/main/Documentation)**
     - **[Software Architecture](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/1_Software_Architecture.md)**
     - **[Steps](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/2_Steps.md)**
     - **[Test, Contribute, Version, and Learning Resources](https://github.com/shiyanboxer/Image-Repository/blob/main/Documentation/3_Test_Contribute_Version_%20Learning_Resources.md)**
