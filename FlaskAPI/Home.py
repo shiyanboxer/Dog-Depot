@@ -6,14 +6,7 @@ from flask_cors import CORS
 # https://www.w3schools.com/python/python_mongodb_find.asp
 # https://docs.mongodb.com/manual/reference/method/db.collection.find/
 
-# TODO:
-#  - Error handling for collection = connect.connect_db()
-#  - Validate the request parameters before using them
-#  - What is the bottleneck of the home page? How could you improve it? (Paginate the request)
-#  - Change the status of a request to 400 If it is an error, rather then having an “isError” field
-#  - Have each API route deployed as separate?
-#  - Have API URL as env variable
-#  - Frontend, document.getElementById
+# TODO: error handling for collection = connect.connect_db()
 
 app = flask.Flask(__name__)
 # Separates client and server local host
@@ -21,6 +14,10 @@ cors = CORS(app)
 
 app.config["DEBUG"] = True
 
+
+# @app.route("/home",methods=["GET"])
+# def get_home():
+#     return "home"
 
 @app.route('/', methods=['GET'])
 def home():

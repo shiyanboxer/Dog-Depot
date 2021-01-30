@@ -55,4 +55,4 @@ def search():
     return json.dumps({"isError": False, "result": result})
 
 
-app.run(port=5002, host="0.0.0.0")
+app.run(port=5002, host = "0.0.0.0")

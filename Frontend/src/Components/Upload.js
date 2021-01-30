@@ -23,8 +23,8 @@ class Upload extends React.Component{
 
         axios({
             method:"POST",
-            url:"https://dog-depot-shiyan.herokuapp.com/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             // url:"https://dog-depot-shiyan.herokuapp.com/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
+            url:"http://127.0.0.1:5003/upload?imagename="+imagename+"&author="+author+"&tag="+tag,
             data: data
             }).then((resp)=>{
                 const data = resp.data
@@ -34,9 +34,7 @@ class Upload extends React.Component{
                 else{
                     alert(data.successMessage)
                 }
-
             })
-
       }
       handleChange(files){
         this.setState({

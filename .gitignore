@@ -1,5 +1,5 @@
 # Environment
 .env
 
-# AWS passwords
+# AWS passwords and s3
 env.py
