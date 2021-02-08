@@ -25,7 +25,7 @@ that allow you to interact with the backend including:
 The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs. For the purpose
 of a **[Demo](https://dog-depot.netlify.app/)**, Heroku and Netlify were used to deploy the APIs and website.
 
-![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)
+[![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)](https://youtu.be/5dTqHw_TCBQ)
 
 ## Quickstart with Docker
 
