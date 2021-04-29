@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
 
-
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
 
@@ -11,7 +10,7 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 COPY . /app
-EXPOSE 5002
+EXPOSE 5001
 ENTRYPOINT [ "python" ]
 
-CMD [ "Search.py" ]
+CMD [ "Home.py" ]
