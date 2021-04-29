@@ -1,8 +1,9 @@
 # Dog Depot
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
-- **Last Updated: January 17th, 2020**
+- **Last Updated: April 28th, 2021** In the process of writting more tests :)
 - **[Website Link](https://dog-depot.netlify.app/)** (Please give the demo a moment to load)
+- **[Demo Video](https://youtu.be/5dTqHw_TCBQ)**
 - **[Docker Hub APIs Repo](https://hub.docker.com/repository/docker/shiyanboxer/imagerepository)**
     - **[Home API](https://dog-depot-by-shiyan-boxer.herokuapp.com/)**
     - **[Search API](https://dog-depot-by-shiyan-boxer.herokuapp.com/search)**
@@ -25,7 +26,7 @@ that allow you to interact with the backend including:
 The project is deployed on Beanstalk which is running one EC2 instance containing the Dockerized APIs. For the purpose
 of a **[Demo](https://dog-depot.netlify.app/)**, Heroku and Netlify were used to deploy the APIs and website.
 
-![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)
+[![Screenshot](https://github.com/shiyanboxer/Image-Repository/blob/main/Images/Screenshot.jpg)](https://youtu.be/5dTqHw_TCBQ)
 
 ## Quickstart with Docker
 
