@@ -1,4 +1,4 @@
-# Dog Depot
+# Dog Depot File Repository
 
 - **By: [Shiyan Boxer](http://shiyanboxer.netlify.app/)**
 - **Last Updated: April 28th, 2021** In the process of writting more tests :)
