@@ -37,8 +37,8 @@ class Home extends React.Component {
     componentDidMount() {
         axios({
             method: "GET",
-            // url: "https://dog-depot-shiyan.herokuapp.com/"
-            url: "http://127.0.0.1:5001/"
+            url: "https://dog-depot-shiyan.herokuapp.com/"
+            // url: "http://127.0.0.1:5001/"
         }).then((response) => {
             if (response.data.isError === false) {
                 const new_data = response.data.result
